@@ -13,4 +13,6 @@ View: v_index_index.php
 <br>
 <a href="\users\profile">Profile</a>
 <br>
+<a href="\posts">Posts</a>
+<br>
 <a href="\posts\add">Add Post</a>
