@@ -12,3 +12,5 @@ View: v_index_index.php
 <a href="\users\signup">Signup</a>
 <br>
 <a href="\users\profile">Profile</a>
+<br>
+<a href="\posts\add">Add Post</a>
