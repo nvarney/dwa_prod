@@ -16,3 +16,5 @@ View: v_index_index.php
 <a href="\posts">Posts</a>
 <br>
 <a href="\posts\add">Add Post</a>
+<br>
+<a href="\posts\users">Follow Users</a>
