@@ -15,7 +15,7 @@ If you want a different default time format for this app, set it below
 
 
 # What is the name of this app?
-	define('APP_NAME', 'My App');  
+	define('APP_NAME', 'p2');  
 
 # When email is sent out from the server, where should it come from?
 # Ideally, this should match the domain name
@@ -32,7 +32,7 @@ A email designated to receive messages from the server. Examples:
 	define('SYSTEM_EMAIL', 'webmaster@myapp.com'); 
 
 # Default DB name for this app
-	define('DB_NAME', "myapp_com"); 
+	define('DB_NAME', "nathani2_p2_nathanielvarney_com"); 
 
 # Timezone
 	define('TIMEZONE', 'America/New_York');
