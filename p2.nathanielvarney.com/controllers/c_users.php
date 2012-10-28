@@ -23,13 +23,23 @@ class users_controller extends base_controller {
 	}
 	
 	public function profile($user_name = NULL) {
-		
-		if($user_name == NULL) {
-			echo "No user specified";
-		}
-		else {
-			echo "This is the profile for ".$user_name;
-		}
+		# Setup view
+		$this->template->content = View::instance('v_users_profile');
+		$this->template->title   = "Profile";
+
+		# Load CSS / JS
+		$client_files = Array(
+				"/css/users.css",
+				"/js/users.js",
+	            );
+	
+        $this->template->client_files = Utils::load_client_files($client_files);  
+
+		# Pass information to the view
+		$this->template->content->user_name = $user_name;
+				
+		# Render template
+		echo $this->template;
 	}
 		
 } # end of the class
