@@ -40,12 +40,15 @@ class users_controller extends base_controller {
 		echo "You're signed up";
 	}
 	
-	public function login() {
+	public function login($error = NULL) {
 		#echo "This is the login page";
 
 		# Setup view
 		$this->template->content = View::instance('v_users_login');
 		$this->template->title   = "Login";
+		
+		# Pass data to the view
+		$this->template->content->error = $error;
 		
 		# Render template
 		echo $this->template;
@@ -72,13 +75,13 @@ class users_controller extends base_controller {
 		if(!$token) {
 				
 			# Send them back to the login page
-			Router::redirect("/users/login/");
+			Router::redirect("/users/login/error");
 			
 		# But if we did, login succeeded! 
 		} else {
 				
 			# Store this token in a cookie
-			setcookie("token", $token, strtotime('+1 year'), '/');
+			setcookie("token", $token, strtotime('+2 weeks'), '/');
 			
 			# Send them to the main page - or whever you want them to go
 			Router::redirect("/");			
