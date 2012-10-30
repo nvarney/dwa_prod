@@ -148,5 +148,15 @@ class users_controller extends base_controller {
 		# Render template
 			echo $this->template;	
 	}
+	
+	public function p_update_info(){
+		# Testing check if information was added
+		if ($_POST['first_name'] != ""){
+			echo "You entered ".$_POST['first_name'];
+		} else {
+			echo "you entered nothing";
+		}
+	
+	}
 		
 } # end of the class
