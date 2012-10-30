@@ -138,5 +138,9 @@ class users_controller extends base_controller {
 		# Render template
 		echo $this->template;
 	}
+	
+	public function update_info(){
+	
+	}
 		
 } # end of the class
