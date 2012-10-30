@@ -140,7 +140,13 @@ class users_controller extends base_controller {
 	}
 	
 	public function update_info(){
-	
+		# echo "This is the signup page";
+		# Setup view
+			$this->template->content = View::instance('v_users_update_info');
+			$this->template->title   = "Update Account Information";
+			
+		# Render template
+			echo $this->template;	
 	}
 		
 } # end of the class
