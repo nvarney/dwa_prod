@@ -138,30 +138,5 @@ class users_controller extends base_controller {
 		# Render template
 		echo $this->template;
 	}
-	
-	public function update_profile(){
-		#Page for updating user information
-		#Setup view
-			$this->template->content = View::instance('v_users_update_profile');
-			$this->template->title   = "Update Your Information";
-			
-		#Render template
-			echo $this->template;
-	}
-	
-	public function p_update_profile{
-		# Update first name if data was entered
-		if ($_POST['first_name'] != NULL) {
-			#testing
-			echo "you entered a name";
-		} else {
-			echo "you didn't enter a name";
-		}
-		# $data[] = Array("person_id" => 1, "first_name" => 'Ethel', "email" => 'ethel@aol.com');
-		# $data[] = Array("person_id" => 2, "first_name" => 'Leroy', "email" => 'leroy@hotmail.com');
-		# $data[] = Array("person_id" => 3, "first_name" => 'Francis', "email" => 'francis@gmail.com.com');	
-		# $update = DB::instance("courses_webstartwomen_com")->update_or_insert_rows('people', $data);
-	
-	}
 		
 } # end of the class
