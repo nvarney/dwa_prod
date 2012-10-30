@@ -163,6 +163,9 @@ class users_controller extends base_controller {
 		if (empty($data)) {
 			echo "You have made no updates.";
 		} else {
+			# Add timestamp for update
+			$data['modified'] = Time::now();
+		
 			# Update the DB with changes
 			DB::instance(DB_NAME)->update("users", $data, "WHERE token = '".$this->user->token."'");
 		}
