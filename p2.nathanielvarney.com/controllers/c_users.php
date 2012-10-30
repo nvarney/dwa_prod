@@ -159,6 +159,21 @@ class users_controller extends base_controller {
 			echo "You entered ".$_POST['first_name'];
 		}
 		
+		if ($_POST['last_name'] != ""){
+			$data['last_name'] = $_POST['last_name'];
+			echo "You entered ".$_POST['last_name'];
+		}
+
+		if ($_POST['email'] != ""){
+			$data['email'] = $_POST['email'];
+			echo "You entered ".$_POST['email'];
+		}
+		
+		if ($_POST['password'] != ""){
+			$data['password'] = sha1(PASSWORD_SALT.$_POST['password']);
+			echo "You entered ".$_POST['password'];
+		}
+		
 		# Check if any updates were made
 		if (empty($data)) {
 			echo "You have made no updates.";
