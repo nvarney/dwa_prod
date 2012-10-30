@@ -150,12 +150,24 @@ class users_controller extends base_controller {
 	}
 	
 	public function p_update_info(){
+		# Generate array to store data for update
+		$data = Array();
+	
 		# Testing check if information was added
 		if ($_POST['first_name'] != ""){
+			# if data found build array to update first name
+			$data["first_name"] = $_POST['first_name']);
+			
 			echo "You entered ".$_POST['first_name'];
 		} else {
 			echo "you entered nothing";
 		}
+		
+		# Generate the required update timestamp
+			$data["modified"] = Time::now();
+		
+		# Update the with the entered information
+		DB::instance(DB_NAME)->update("users", $data, "WHERE token = '".$this->user->token."'");
 	
 	}
 		
