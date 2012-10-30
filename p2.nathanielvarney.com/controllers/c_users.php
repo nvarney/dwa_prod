@@ -157,12 +157,15 @@ class users_controller extends base_controller {
 		if ($_POST['first_name'] != ""){
 			$data['first_name'] = $_POST['first_name'];
 			echo "You entered ".$_POST['first_name'];
-		} else {
-			echo "you entered nothing";
 		}
 		
-		# Update the DB with changes
-		DB::instance(DB_NAME)->update("users", $data, "WHERE token = '".$this->user->token."'");
+		# Check if any updates were made
+		if (empty($data)) {
+			echo "You have made no updates.";
+		} else {
+			# Update the DB with changes
+			DB::instance(DB_NAME)->update("users", $data, "WHERE token = '".$this->user->token."'");
+		}
 	
 	}
 		
