@@ -150,12 +150,19 @@ class users_controller extends base_controller {
 	}
 	
 	public function p_update_info(){
+		# Generate array for data
+		$data = Array();
+		
 		# Testing check if information was added
 		if ($_POST['first_name'] != ""){
+			$data['first_name'] = $_POST['first_name'];
 			echo "You entered ".$_POST['first_name'];
 		} else {
 			echo "you entered nothing";
 		}
+		
+		# Update the DB with changes
+		DB::instance(DB_NAME)->update("users", $data, "WHERE token = '".$this->user->token."'");
 	
 	}
 		
