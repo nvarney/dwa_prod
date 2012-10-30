@@ -26,6 +26,7 @@
 			<a href='/posts/users/'>Change who you're following</a>
 			<a href='/posts/'>View posts</a>
 			<a href='/posts/add'>Add a new post</a>
+			<a href='/users/update_info'>Update your Information</a>
 		
 		<!-- Menu options for users who are not logged in -->	
 		<? else: ?>
