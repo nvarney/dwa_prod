@@ -83,7 +83,7 @@ class users_controller extends base_controller {
 			# Store this token in a cookie
 			setcookie("token", $token, strtotime('+2 weeks'), '/');
 			
-			# Send them to the main page - or whever you want them to go
+			# Send them to the main page - or wherever you want them to go
 			Router::redirect("/");			
 		}
 	
@@ -156,33 +156,42 @@ class users_controller extends base_controller {
 		# Testing check if information was added
 		if ($_POST['first_name'] != ""){
 			$data['first_name'] = $_POST['first_name'];
-			echo "You entered ".$_POST['first_name'];
+			# echo "You entered ".$_POST['first_name'];
 		}
 		
 		if ($_POST['last_name'] != ""){
 			$data['last_name'] = $_POST['last_name'];
-			echo "You entered ".$_POST['last_name'];
+			# echo "You entered ".$_POST['last_name'];
 		}
 
 		if ($_POST['email'] != ""){
 			$data['email'] = $_POST['email'];
-			echo "You entered ".$_POST['email'];
+			# echo "You entered ".$_POST['email'];
 		}
 		
 		if ($_POST['password'] != ""){
 			$data['password'] = sha1(PASSWORD_SALT.$_POST['password']);
-			echo "You entered ".$_POST['password'];
+			# echo "You entered ".$_POST['password'];
 		}
 		
 		# Check if any updates were made
 		if (empty($data)) {
-			echo "You have made no updates.";
+			# Inform user and return to home
+			echo "No updates have been made.";
+			sleep(2);
+			Router::redirect("/");	
+			
 		} else {
 			# Add timestamp for update
 			$data['modified'] = Time::now();
 		
 			# Update the DB with changes
 			DB::instance(DB_NAME)->update("users", $data, "WHERE token = '".$this->user->token."'");
+			
+			# Update the user that the changes were successful then return to home
+			echo "Updates successfully applied.";
+			sleep(2);
+			Router::redirect("/");
 		}
 	
 	}
