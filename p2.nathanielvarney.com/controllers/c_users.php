@@ -174,11 +174,15 @@ class users_controller extends base_controller {
 			# echo "You entered ".$_POST['password'];
 		}
 		
+		if ($_POST['user_image_url'] != ""){
+			$data['user_image_url'] = $_POST['user_image_url'];
+			# echo "You entered ".$_POST['email'];
+		}
+		
 		# Check if any updates were made
 		if (empty($data)) {
 			# Inform user and return to home
 			echo "No updates have been made.";
-			sleep(2);
 			Router::redirect("/");	
 			
 		} else {
@@ -190,7 +194,6 @@ class users_controller extends base_controller {
 			
 			# Update the user that the changes were successful then return to home
 			echo "Updates successfully applied.";
-			sleep(2);
 			Router::redirect("/");
 		}
 	

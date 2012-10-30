@@ -16,6 +16,10 @@
 	<input type='password' name='password'>
 	<br><br>
 	
+	User Image URL<br>
+	<input type='text' name='user_image_url'>
+	<br><br>
+	
 	<input type='submit'>
 
 </form> 
