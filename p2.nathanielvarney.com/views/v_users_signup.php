@@ -17,7 +17,7 @@
 	<br><br>
 	
 	Confirm Password<br>
-	<input type='password2' name='password2'>
+	<input type='password' name='password2'>
 	<br><br>
 	
 	<input type='submit'>
