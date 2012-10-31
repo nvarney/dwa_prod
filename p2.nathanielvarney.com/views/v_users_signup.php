@@ -16,10 +16,6 @@
 	<input type='password' name='password'>
 	<br><br>
 	
-	Confirm Password<br>
-	<input type='password2' name='password2'>
-	<br><br>
-	
 	<input type='submit'>
 
 </form> 
