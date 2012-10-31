@@ -169,8 +169,12 @@ class users_controller extends base_controller {
 			# echo "You entered ".$_POST['email'];
 		}
 		
-		if ($_POST['password'] != ""){
-			$data['password'] = sha1(PASSWORD_SALT.$_POST['password']);
+		if ($_POST['password'] != "") {
+			if ($_POST['password'] == $_POST['password2']) {
+				$data['password'] = sha1(PASSWORD_SALT.$_POST['password']);
+			} else {
+			echo "Your passwords do not match";
+			}
 			# echo "You entered ".$_POST['password'];
 		}
 		
