@@ -28,7 +28,7 @@ class posts_controller extends base_controller {
 		
 		# If the query returns empty, redirect to to the follow selection page
 		if (empty($connections)) {
-			echo "You aren't following anyone";
+			echo( "You aren't following anyone");
 		} else {
 
 			# In order to query for the posts we need, we're going to need a string of user id's, separated by commas
