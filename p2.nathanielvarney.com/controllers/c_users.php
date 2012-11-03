@@ -7,14 +7,16 @@ class users_controller extends base_controller {
 	} 
 	
 	public function index() {
-		echo "Welcome to the users's department";
+		# Changed from class example to redirect to home page
+		#echo "Welcome to the users's department";
+		Router::redirect("/");
 	}
 	
 	public function signup($message = NULL) {
 		# echo "This is the signup page";
 		# Setup view
 			$this->template->content = View::instance('v_users_signup');
-			$this->template->message = $error;
+			$this->template->message = $message;
 			$this->template->title   = "Signup";
 			
 		# Render template
@@ -144,6 +146,7 @@ class users_controller extends base_controller {
 		
 		# Setup view
 		$this->template->content = View::instance('v_users_profile');
+		$this->template->message = $message;
 		$this->template->title   = "Profile of".$this->user->first_name;
 			
 		/* Example of loading specific client files with a view (not needed here)
@@ -203,7 +206,7 @@ class users_controller extends base_controller {
 			# Check if email address is of the right form
 			if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 				# Send back to signup with appropriate error
-				Router::redirect("/users/update_info/Please enter a valid email address");
+				Router::redirect("/users/update_info/Please enter a valid email address.");
 			}
 		}
 		
@@ -211,7 +214,7 @@ class users_controller extends base_controller {
 			# Check if passwords match
 			if ($_POST['password'] != $_POST['password_check']) {
 				# Send back to signup with appropriate error
-				Router::redirect("/users/update_info/Passwords do not match");
+				Router::redirect("/users/update_info/Passwords do not match.");
 			}
 		
 			# Insert the password into the data array	
@@ -225,8 +228,7 @@ class users_controller extends base_controller {
 		# Check if any updates were made
 		if (empty($data)) {
 			# Inform user and return to home
-			echo "No updates have been made.";
-			Router::redirect("/");	
+			Router::redirect("/users/profile/No updates were made.");	
 			
 		} else {
 			# Add timestamp for update
@@ -236,8 +238,7 @@ class users_controller extends base_controller {
 			DB::instance(DB_NAME)->update("users", $data, "WHERE token = '".$this->user->token."'");
 			
 			# Update the user that the changes were successful then return to home
-			echo "Updates successfully applied.";
-			Router::redirect("/");
+			Router::redirect("/users/profile/Profile updated.");
 		}
 	
 	}
