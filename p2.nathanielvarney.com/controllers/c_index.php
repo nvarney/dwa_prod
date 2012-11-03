@@ -9,7 +9,7 @@ class index_controller extends base_controller {
 	/*-------------------------------------------------------------------------------------------------
 	Access via http://yourapp.com/index/index/
 	-------------------------------------------------------------------------------------------------*/
-	public function index() {
+	public function index($message=NULL) {
 		
 		# Any method that loads a view will commonly start with this
 		# First, set the content of the template with a view file
@@ -24,6 +24,9 @@ class index_controller extends base_controller {
 	                    );
 	    
 	    	$this->template->client_files = Utils::load_client_files($client_files);   
+	      		
+	    # Add any messages
+	    	$this->template->message = $message;
 	      		
 		# Render the view
 			echo $this->template;
