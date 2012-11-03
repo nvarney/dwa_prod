@@ -10,10 +10,11 @@ class users_controller extends base_controller {
 		echo "Welcome to the users's department";
 	}
 	
-	public function signup() {
+	public function signup($error = NULL) {
 		# echo "This is the signup page";
 		# Setup view
 			$this->template->content = View::instance('v_users_signup');
+			$this->template->content->error = $error;
 			$this->template->title   = "Signup";
 			
 		# Render template
@@ -141,12 +142,21 @@ class users_controller extends base_controller {
 		echo $this->template;
 	}
 	
-	public function update_info(){
-		# echo "This is the signup page";
+	public function update_info($error = NULL){
+		# If user is blank, they're not logged in, show message and don't do anything else
+		if(!$this->user) {
+			echo "Members only. <a href='/users/login'>Login</a>";
+			
+			# Return will force this method to exit here so the rest of 
+			# the code won't be executed and the info update page view won't be displayed.
+			return false;
+		}
+		
 		# Setup view
 			$this->template->content = View::instance('v_users_update_info');
+			$this->template->content->error = $error;
 			$this->template->title   = "Update Account Information";
-			
+		
 		# Render template
 			echo $this->template;	
 	}
@@ -173,12 +183,14 @@ class users_controller extends base_controller {
 		
 		if ($_POST['password'] != ""){
 			$data['password'] = sha1(PASSWORD_SALT.$_POST['password']);
-			# echo "You entered ".$_POST['password'];
+		}
+		
+		if ($_POST['password_check'] != ""){
+			$data['password'] = sha1(PASSWORD_SALT.$_POST['password_check']);
 		}
 		
 		if ($_POST['user_image_url'] != ""){
 			$data['user_image_url'] = $_POST['user_image_url'];
-			# echo "You entered ".$_POST['email'];
 		}
 		
 		# Check if any updates were made
