@@ -26,6 +26,21 @@ class users_controller extends base_controller {
 		# Dump out the results of POST to see what the form submitted
 		# print_r($_POST);
 		
+		# Check if email address is of the right form
+		if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+			# Send back to signup with appropriate error
+			Router::redirect("/users/signup/Please enter a valid email address");
+		}
+		
+		# Check if passwords match
+		if ($_POST['password'] != $_POST['password_check']) {
+			# Send back to signup with appropriate error
+			Router::redirect("/users/signup/Passwords do not match");
+		}
+		
+		# Remove the password check from the array
+		unset ($_POST['password_check']);
+				
 		# Encrypt the password	
 		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);	
 		

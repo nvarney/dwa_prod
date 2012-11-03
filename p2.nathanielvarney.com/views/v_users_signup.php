@@ -16,6 +16,10 @@
 	<input type='password' name='password'>
 	<br><br>
 	
+	Confirm Password<br>
+	<input type='password' name='password_check'>
+	<br><br>
+	
 	<!-- Display error if one is found -->
 	<? if($error): ?>
 		<div class='error'>
