@@ -9,6 +9,7 @@
 	<!-- JS -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+	<script src="/js/scripts.js"></script>
 				
 	<!-- Controller Specific JS/CSS -->
 	<?=@$client_files; ?>
@@ -16,7 +17,8 @@
 </head>
 
 <body>	
-
+	<!-- Start timer for JS -->
+	<body onload = "startTimer()">
 
 	<div id='menu'>
 	
@@ -43,10 +45,10 @@
 	<br>
 	<!-- Display messages, including errors -->
 	<? if($message): ?>
-		<div class='message'>
+		<div id='message'>
 			<?=$message?>
-		</div>
 		<br>
+		</div>
 	<? endif; ?>
 
 	<!-- The page content -->
