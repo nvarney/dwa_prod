@@ -10,11 +10,11 @@ class users_controller extends base_controller {
 		echo "Welcome to the users's department";
 	}
 	
-	public function signup($error = NULL) {
+	public function signup($message = NULL) {
 		# echo "This is the signup page";
 		# Setup view
 			$this->template->content = View::instance('v_users_signup');
-			$this->template->content->error = $error;
+			$this->template->message = $error;
 			$this->template->title   = "Signup";
 			
 		# Render template
@@ -62,7 +62,7 @@ class users_controller extends base_controller {
 		Router::redirect("/users/login/Signup successful, please login."); 
 	}
 	
-	public function login($error = NULL) {
+	public function login($message = NULL) {
 		#echo "This is the login page";
 
 		# Setup view
@@ -70,8 +70,7 @@ class users_controller extends base_controller {
 		$this->template->title   = "Login";
 		
 		# Pass data to the view
-		$this->template->content->error = $error;
-		$this->template->error = $error;
+		$this->template->message = $message;
 		
 		# Render template
 		echo $this->template;
@@ -133,7 +132,7 @@ class users_controller extends base_controller {
 
 	}
 	
-	public function profile() {
+	public function profile($message = NULL) {
 		# If user is blank, they're not logged in, show message and don't do anything else
 		if(!$this->user) {
 			echo "Members only. <a href='/users/login'>Login</a>";
@@ -164,7 +163,7 @@ class users_controller extends base_controller {
 		echo $this->template;
 	}
 	
-	public function update_info($error = NULL){
+	public function update_info($message = NULL){
 		# If user is blank, they're not logged in, show message and don't do anything else
 		if(!$this->user) {
 			echo "Members only. <a href='/users/login'>Login</a>";
@@ -176,7 +175,7 @@ class users_controller extends base_controller {
 		
 		# Setup view
 			$this->template->content = View::instance('v_users_update_info');
-			$this->template->content->error = $error;
+			$this->template->message = $message;
 			$this->template->title   = "Update Account Information";
 		
 		# Render template

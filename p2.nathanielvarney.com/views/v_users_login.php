@@ -7,13 +7,6 @@
 	Password<br>
 	<input type='password' name='password'>
 	<br><br>
-	
-	<? if($error): ?>
-		<div class='error'>
-			<?=$error?>
-		</div>
-		<br>
-	<? endif; ?>
 
 	<input type='submit'>
 

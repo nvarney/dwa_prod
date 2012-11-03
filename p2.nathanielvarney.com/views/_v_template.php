@@ -40,16 +40,17 @@
 	</div>
 	
 	<br>
-	
-
-	<?=$content;?> 
-	
-	<? if($error): ?>
-		<div class='error'>
-			<?=$error?>
+	<!-- Display messages, including errors -->
+	<? if($message): ?>
+		<div class='message'>
+			<?=$message?>
 		</div>
 		<br>
 	<? endif; ?>
+
+	<!-- The page content -->
+	<?=$content;?> 
+
 
 </body>
 </html>

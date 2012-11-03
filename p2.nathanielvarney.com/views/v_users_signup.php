@@ -20,14 +20,6 @@
 	<input type='password' name='password_check'>
 	<br><br>
 	
-	<!-- Display error if one is found -->
-	<? if($error): ?>
-		<div class='error'>
-			<?=$error?>
-		</div>
-		<br>
-	<? endif; ?>
-	
 	<input type='submit'>
 
 </form> 

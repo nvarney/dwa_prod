@@ -24,14 +24,6 @@
 	<input type='text' name='user_image_url'>
 	<br><br>
 	
-	<!-- Display error if one is found -->
-	<? if($error): ?>
-		<div class='error'>
-			<?=$error?>
-		</div>
-		<br>
-	<? endif; ?>
-	
 	<input type='submit'>
 
 </form> 
