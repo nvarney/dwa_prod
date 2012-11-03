@@ -146,10 +146,11 @@ class users_controller extends base_controller {
 		}
 		
 		# Now, lets build our query to grab the posts
-			$q = "SELECT * 
+			$q = "SELECT *, posts.created AS p_created 
 				FROM posts 
 				JOIN users USING (user_id)
-				WHERE posts.user_id IN (".$this->user->user_id.")"; # This is where we use that string of user_ids we created
+				WHERE posts.user_id IN (".$this->user->user_id.")
+				ORDER BY posts.created DESC"; 
 						
 			# Run our query, store the results in the variable $posts
 			$posts = DB::instance(DB_NAME)->select_rows($q);

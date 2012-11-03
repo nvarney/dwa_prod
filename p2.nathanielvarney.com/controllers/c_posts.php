@@ -49,7 +49,8 @@ class posts_controller extends base_controller {
 			$q = "SELECT *, posts.created AS p_created 
 				FROM posts 
 				JOIN users USING (user_id)
-				WHERE posts.user_id IN (".$connections_string.")"; # This is where we use that string of user_ids we created
+				WHERE posts.user_id IN (".$connections_string.")
+				ORDER BY posts.created DESC"; # This is where we use that string of user_ids we created
 						
 			# Run our query, store the results in the variable $posts
 			$posts = DB::instance(DB_NAME)->select_rows($q);
