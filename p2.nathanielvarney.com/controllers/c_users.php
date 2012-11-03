@@ -113,7 +113,7 @@ class users_controller extends base_controller {
 	
 	}
 	
-	public function logout() {
+	public function logout($message = NULL) {
 		# echo "This is the logout page";
 		
 		# Generate and save a new token for next login
@@ -130,7 +130,7 @@ class users_controller extends base_controller {
 		setcookie("token", "", strtotime('-1 year'), '/');
 		
 		# Send them back to the main landing page
-		Router::redirect("/");
+		Router::redirect("/index/index/You have successfully logged out.");
 
 	}
 	
@@ -167,13 +167,9 @@ class users_controller extends base_controller {
 	}
 	
 	public function update_info($message = NULL){
-		# If user is blank, they're not logged in, show message and don't do anything else
+		# If user is blank, they're not logged in, redirect to login page
 		if(!$this->user) {
-			echo "Members only. <a href='/users/login'>Login</a>";
-			
-			# Return will force this method to exit here so the rest of 
-			# the code won't be executed and the info update page view won't be displayed.
-			return false;
+			Router::redirect("/users/login/Please login first.");
 		}
 		
 		# Setup view
