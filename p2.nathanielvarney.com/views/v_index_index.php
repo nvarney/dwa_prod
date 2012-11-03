@@ -1,3 +1,7 @@
+<? if($user): ?>
+	<? Router::redirect("/users/profile/Welcome back!"); ?>
+<? endif; ?>
+
 <pre>
 Hello World!
 Controller: c_index.php
