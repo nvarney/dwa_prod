@@ -124,6 +124,7 @@ class users_controller extends base_controller {
 		$this->template->content = View::instance('v_users_profile');
 		$this->template->title   = "Profile of".$this->user->first_name;
 			
+		/* Example of loading specific client files with a view (not needed here)
 		# Load CSS / JS
 		$client_files = Array(
 			"/css/users.css",
@@ -131,6 +132,7 @@ class users_controller extends base_controller {
 			);
 	
         $this->template->client_files = Utils::load_client_files($client_files);  
+		*/
 
 		# Pass information to the view
 		$this->template->content->user_name = $user_name;
