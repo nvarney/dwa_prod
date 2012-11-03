@@ -199,15 +199,23 @@ class users_controller extends base_controller {
 
 		if ($_POST['email'] != ""){
 			$data['email'] = $_POST['email'];
-			# echo "You entered ".$_POST['email'];
+			
+			# Check if email address is of the right form
+			if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+				# Send back to signup with appropriate error
+				Router::redirect("/users/update_info/Please enter a valid email address");
+			}
 		}
 		
 		if ($_POST['password'] != ""){
-			$data['password'] = sha1(PASSWORD_SALT.$_POST['password']);
-		}
+			# Check if passwords match
+			if ($_POST['password'] != $_POST['password_check']) {
+				# Send back to signup with appropriate error
+				Router::redirect("/users/update_info/Passwords do not match");
+			}
 		
-		if ($_POST['password_check'] != ""){
-			$data['password'] = sha1(PASSWORD_SALT.$_POST['password_check']);
+			# Insert the password into the data array	
+			$data['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 		}
 		
 		if ($_POST['user_image_url'] != ""){
