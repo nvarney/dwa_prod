@@ -1,8 +1,32 @@
+.post{
+	border: 2px solid black;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	background: #FF0000;
+}
+
+.post_head{
+	
+}
+
+.post_body{
+
+}
+
+.user_thumb{
+	float: left;
+	margin: 0px 5px;
+	overflow: hidden;
+	max-width: 60px;
+	max-height: 60px;
+}
+
+
 body {
-	background: #000000;
+	background: #FFFFFF;
 	font-family: Verdana, Arial, sans-serif;
 	font-size: 15px;
-	color: #FFFFFF;
+	color: #000000;
 }
 
 a:link {
@@ -25,6 +49,7 @@ a:hover {
 	color: #FFFFFF !important;
 	text-decoration: none !important;
 }
+
 
 h1 {
 	/*gradients for multiple browsers from http://www.colorzilla.com/gradient-editor/*/
