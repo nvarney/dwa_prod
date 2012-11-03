@@ -56,6 +56,7 @@ class users_controller extends base_controller {
 		$_POST['created'] = Time::now();
 		$_POST['modified'] = Time::now();
 		$_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
+		$_POST['about_user'] = "Why not update your profile to add a description";
 		
 		# Insert this user into the database
 		$user_id = DB::instance(DB_NAME)->insert("users", $_POST);
@@ -222,7 +223,16 @@ class users_controller extends base_controller {
 		}
 		
 		if ($_POST['user_image_url'] != ""){
+			# Check if the url will fit in the space we have for it
+			if (strlen($_POST['user_image_url']) >= 255 ) {
+				Router::redirect("/users/update_info/Image URL must be less than 255 characters.");
+			}
+			
 			$data['user_image_url'] = $_POST['user_image_url'];
+		}
+		
+		if ($_POST['about_user'] != ""){
+			$data['about_user'] = $_POST['about_user'];
 		}
 		
 		# Check if any updates were made

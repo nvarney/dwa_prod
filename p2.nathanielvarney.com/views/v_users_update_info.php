@@ -24,6 +24,10 @@
 	<input type='text' name='user_image_url'>
 	<br><br>
 	
+	Enter some information about yourself<br>
+	<textarea name='about_user'></textarea>
+	<br><br>
+	
 	<input type='submit'>
 
 </form> 

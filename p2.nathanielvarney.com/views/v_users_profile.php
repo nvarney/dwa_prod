@@ -1,7 +1,9 @@
 <h1>This is the profile of <?=$user->first_name?></h1>
 
 <div id="about_me">
-	<p> And this is where the description would go </p>
+	<p> And this is where the description would go 
+		<?=$user->about_user?>
+	</p>
 </div>
 
 <div id="posts">
