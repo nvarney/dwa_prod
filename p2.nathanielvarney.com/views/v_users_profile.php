@@ -5,5 +5,14 @@
 </div>
 
 <div id="posts">
-	<p> And here we will put a list of their posts <p>
+	<? foreach($posts as $post): ?>
+	
+	<h2>
+	<img src=<?=$post['user_image_url']?> width=100 height=100 alt=<?=$post['first_name']?>>
+	<?=$post['first_name']?> <?=$post['last_name']?> posted:</h2>
+	<?=$post['content']?>
+	
+	<br><br>
+
+	<? endforeach; ?>
 </div>

@@ -144,20 +144,24 @@ class users_controller extends base_controller {
 			return false;
 		}
 		
+		# Now, lets build our query to grab the posts
+			$q = "SELECT * 
+				FROM posts 
+				JOIN users USING (user_id)
+				WHERE posts.user_id IN (".$this->user->user_id.")"; # This is where we use that string of user_ids we created
+						
+			# Run our query, store the results in the variable $posts
+			$posts = DB::instance(DB_NAME)->select_rows($q);
+			
+
+		
 		# Setup view
 		$this->template->content = View::instance('v_users_profile');
 		$this->template->message = $message;
 		$this->template->title   = "Profile of".$this->user->first_name;
-			
-		/* Example of loading specific client files with a view (not needed here)
-		# Load CSS / JS
-		$client_files = Array(
-			"/css/users.css",
-			"/js/users.js",
-			);
-	
-        $this->template->client_files = Utils::load_client_files($client_files);  
-		*/
+		
+		# Pass data to the view
+		$this->template->content->posts = $posts;
 
 		# Pass information to the view
 		$this->template->content->user_name = $user_name;
