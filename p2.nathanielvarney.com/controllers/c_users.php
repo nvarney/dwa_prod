@@ -26,6 +26,12 @@ class users_controller extends base_controller {
 		# Dump out the results of POST to see what the form submitted
 		# print_r($_POST);
 		
+		# Check if data was entered
+		if (($_POST['first_name'] == "") || ($_POST['last_name'] == "") || ($_POST['password'] == "")){
+			# Send back to signup with appropriate error
+			Router::redirect("/users/signup/Please enter all requested information");		
+		}
+		
 		# Check if email address is of the right form
 		if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 			# Send back to signup with appropriate error
