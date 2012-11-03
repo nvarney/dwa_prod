@@ -46,7 +46,7 @@ class posts_controller extends base_controller {
 			# Connections string example: 10,7,8 (where the numbers are the user_ids of who this user is following)
 		
 			# Now, lets build our query to grab the posts
-			$q = "SELECT * 
+			$q = "SELECT *, posts.created AS p_created 
 				FROM posts 
 				JOIN users USING (user_id)
 				WHERE posts.user_id IN (".$connections_string.")"; # This is where we use that string of user_ids we created
