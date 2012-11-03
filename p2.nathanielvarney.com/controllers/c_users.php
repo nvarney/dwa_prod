@@ -58,8 +58,8 @@ class users_controller extends base_controller {
 		# Insert this user into the database
 		$user_id = DB::instance(DB_NAME)->insert("users", $_POST);
 		
-		# For now, just confirm they've signed up - we can make this fancier later
-		echo "You're signed up";
+		# Redirect to the login page with a message
+		Router::redirect("/users/login/Signup successful, please login."); 
 	}
 	
 	public function login($error = NULL) {
@@ -71,6 +71,7 @@ class users_controller extends base_controller {
 		
 		# Pass data to the view
 		$this->template->content->error = $error;
+		$this->template->error = $error;
 		
 		# Render template
 		echo $this->template;
@@ -97,7 +98,7 @@ class users_controller extends base_controller {
 		if(!$token) {
 				
 			# Send them back to the login page
-			Router::redirect("/users/login/error");
+			Router::redirect("/users/login/Login failed. Please check your username and password.");
 			
 		# But if we did, login succeeded! 
 		} else {

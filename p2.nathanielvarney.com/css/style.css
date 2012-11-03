@@ -78,21 +78,21 @@ h2 {
 	text-align: center;
 }	
 
-#about-me {
+#about_me {
 
 }
 
-#projet-info {
+#projet_info {
 
 }
 
-#project-info td {
+#project_info td {
 	text-align: left;
 	border: 1px solid #000000;
 	padding: 3px 7px 2px 7px;
 }
 
-#project-info tr.alt td {
+#project_info tr.alt td {
 	color: #000000;
 	background-color: #FFFFF0;
 }

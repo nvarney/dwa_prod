@@ -10,7 +10,7 @@
 	
 	<? if($error): ?>
 		<div class='error'>
-			Login failed. Please double check your email and password.
+			<?=$error?>
 		</div>
 		<br>
 	<? endif; ?>

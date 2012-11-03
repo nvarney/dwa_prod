@@ -43,7 +43,13 @@
 	
 
 	<?=$content;?> 
-
+	
+	<? if($error): ?>
+		<div class='error'>
+			<?=$error?>
+		</div>
+		<br>
+	<? endif; ?>
 
 </body>
 </html>
