@@ -29,7 +29,8 @@ class posts_controller extends base_controller {
 		
 		# If the query returns empty, redirect to to the follow selection page
 		if (empty($connections)) {
-			echo( "You aren't following anyone");
+			Router::redirect("/posts/users/Please choose who you would like to follow");
+			
 		} else {
 
 			# In order to query for the posts we need, we're going to need a string of user id's, separated by commas
@@ -61,11 +62,12 @@ class posts_controller extends base_controller {
 		}
 	}
 	
-	public function add() {
+	public function add($message = NULL) {
 	
 		# Setup view
 		$this->template->content = View::instance('v_posts_add');
 		$this->template->title   = "Add a new post";
+		$this->template->message = $message;
 			
 		# Render template
 		echo $this->template;
@@ -73,24 +75,28 @@ class posts_controller extends base_controller {
 	}
 	
 	public function p_add() {
+		# Check if anything was entered
+		if ($_POST['content'] == "") {
+			Router::redirect("/posts/add/Surely you must have something to say");
+		} else {
+			# Associate this post with this user
+			$_POST['user_id']  = $this->user->user_id;
 			
-		# Associate this post with this user
-		$_POST['user_id']  = $this->user->user_id;
-		
-		# Unix timestamp of when this post was created / modified
-		$_POST['created']  = Time::now();
-		$_POST['modified'] = Time::now();
-		
-		# Insert
-		# Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
-		DB::instance(DB_NAME)->insert('posts', $_POST);
-		
-		# Quick and dirty feedback
-		echo "Your post has been added. <a href='/posts/add'>Add another?</a>";
+			# Unix timestamp of when this post was created / modified
+			$_POST['created']  = Time::now();
+			$_POST['modified'] = Time::now();
+			
+			# Insert
+			# Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
+			DB::instance(DB_NAME)->insert('posts', $_POST);
+			
+			# Quick and dirty feedback
+			Router::redirect("/users/profile/Your post has been added");
+		}
 	
 	}
 	
-	public function users() {
+	public function users($message = NULL) {
 		# Set up the view
 		$this->template->content = View::instance("v_posts_users");
 		$this->template->title   = "Users";
@@ -114,6 +120,7 @@ class posts_controller extends base_controller {
 		$connections = DB::instance(DB_NAME)->select_array($q, 'user_id_followed');
 				
 		# Pass data (users and connections) to the view
+		$this->template->message = $message;
 		$this->template->content->users       = $users;
 		$this->template->content->connections = $connections;
 	
