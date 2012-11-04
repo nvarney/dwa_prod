@@ -30,6 +30,13 @@ class index_controller extends base_controller {
 
 	}
 	
+	public function proposal() {
+		
+		$this->template->content = View::instance('v_index_proposal');
+		$this->template->title = "Project 3 Proposal";
+		echo $this->template;
+	}
+	
 	
 	
 		
