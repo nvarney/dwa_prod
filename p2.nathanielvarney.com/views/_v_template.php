@@ -18,39 +18,45 @@
 
 <body>	
 	<!-- Start timer for JS -->
+	
 	<body onload = "startTimer()">
 
-	<div id='menu'>
-	
-		<!-- Menu for users who are logged in -->
-		<? if($user): ?>
+	<div id='menu'>	
+		<div id='logo'>
+			µBlog
+		</div>
+		
+		<div id='menu_text'>
+			<!-- Menu for users who are logged in -->
+			<? if($user): ?>
+				
+				<a href='/users/logout'>Logout</a>
+				<a href='/users/profile'>View your profile</a>
+				<a href='/posts/users/'>Change who you're following</a>
+				<a href='/posts/'>View posts</a>
+				<a href='/posts/add'>Add a new post</a>
+				<a href='/users/update_info'>Update your Information</a>
 			
-			<a href='/users/logout'>Logout</a>
-			<a href='/users/profile'>View your profile</a>
-			<a href='/posts/users/'>Change who you're following</a>
-			<a href='/posts/'>View posts</a>
-			<a href='/posts/add'>Add a new post</a>
-			<a href='/users/update_info'>Update your Information</a>
+			<!-- Menu options for users who are not logged in -->	
+			<? else: ?>
+			
+				<a href='/users/signup'>Sign up</a>
+				<a href='/users/login'>Log in</a>
+			
+			<? endif; ?>
+		</div>	
 		
-		<!-- Menu options for users who are not logged in -->	
-		<? else: ?>
-		
-			<a href='/users/signup'>Sign up</a>
-			<a href='/users/login'>Log in</a>
-		
-		<? endif; ?>
-	
 	</div>
 	
-	<br>
 	<!-- Display messages, including errors -->
+	
 	<? if($message): ?>
 		<div id='message'>
-			<?=$message?>
-		<br>
+			
+				<?=$message?>
 		</div>
 	<? endif; ?>
-
+	
 	<!-- The page content -->
 	<?=$content;?> 
 

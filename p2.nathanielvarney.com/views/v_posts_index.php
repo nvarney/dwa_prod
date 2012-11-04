@@ -1,3 +1,6 @@
+
+<h2> Here's what your friends have to say: </h2>
+
 <? foreach($posts as $post): ?>
 	
 	<div class="post">

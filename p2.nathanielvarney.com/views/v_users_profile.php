@@ -1,20 +1,35 @@
-<h1>This is the profile of <?=$user->first_name?></h1>
+<h2>This is the profile of <?=$user->first_name?></h2>
 
-<div id="about_me">
-	<p> And this is where the description would go 
+<div class="post">
+	<img class="user_thumb" src=<?=$post['user_image_url']?> alt=<?=$post['first_name']?>>	
+	
+	<div class="post_head">
+		About Me:
+	</div>
+	
+	<div class="post_body">
 		<?=$user->about_user?>
-	</p>
+	</div>
+	
+	<div id="footer"></div>
+	
 </div>
 
-<div id="posts">
-	<? foreach($posts as $post): ?>
-	
-	<h2>
-	<img src=<?=$post['user_image_url']?> width=100 height=100 alt=<?=$post['first_name']?>>
-	<?=$post['first_name']?> <?=$post['last_name']?> posted on <? echo date("F j, Y", $post['p_created']); ?>:</h2>
-	<?=$post['content']?>
-	
-	<br><br>
 
-	<? endforeach; ?>
-</div>
+<? foreach($posts as $post): ?>
+		
+	<div class="post">	
+		<div class="post_head">
+			<?=$post['first_name']?> <?=$post['last_name']?> posted on <? echo date("F j, Y", $post['p_created']); ?>:
+		</div>
+		
+		<div class="post_body">
+			<?=$post['content']?>
+		</div>
+		
+		<div id="footer"></div>
+		
+	</div>
+
+
+<? endforeach; ?>
