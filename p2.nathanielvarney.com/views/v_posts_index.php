@@ -11,6 +11,8 @@
 			<?=$post['content']?>
 		</div>
 		
+		<div id="footer"></div>
+		
 	</div>
 
 <? endforeach; ?>
