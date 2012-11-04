@@ -1,7 +1,7 @@
 <h2>This is the profile of <?=$user->first_name?></h2>
 
 <div class="post">
-	<img class="user_thumb" src=<?=$post['user_image_url']?> alt=<?=$post['first_name']?>>	
+	<img class="user_thumb" src=<?=$user->user_image_url?> alt=<?=$user->first_name?>>	
 	
 	<div class="post_head">
 		About Me:
@@ -15,6 +15,7 @@
 	
 </div>
 
+<h2>Here's what you've posted</h2>
 
 <? foreach($posts as $post): ?>
 		
