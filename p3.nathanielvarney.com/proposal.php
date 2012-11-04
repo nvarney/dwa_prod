@@ -38,10 +38,10 @@
 	</li>
 </ul>
 
-<img src="/img/Dwa proposal 3_01.png" width="300">
-<img src="/img/Dwa proposal 3_02.png" width="300">
-<img src="/img/Dwa proposal 3_03.png" width="300">
-<img src="/img/Dwa proposal 3_04.png" width="300">
+<img src="Dwa proposal 3_01.png" width="300">
+<img src="Dwa proposal 3_02.png" width="300">
+<img src="Dwa proposal 3_03.png" width="300">
+<img src="Dwa proposal 3_04.png" width="300">
 
 <h2>Inspiration:</h2>
 <ul>
