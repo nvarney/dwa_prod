@@ -15,6 +15,7 @@
 </head>
 
 <body>
+// What has science done?!
 <h1>Chore lists with requirements and rewards </h1>
 
 <h2>Description:</h2>
