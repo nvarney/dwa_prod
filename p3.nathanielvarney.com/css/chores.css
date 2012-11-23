@@ -35,9 +35,11 @@ h1 {
 }
 
 #chore-timer {
-	float: right;
+	font-size: 20px;
+	text-align: right;
 	color: red;
 	margin-right: 10px;
+	margin-top: 5px;
 }
 
 #chore-reward{

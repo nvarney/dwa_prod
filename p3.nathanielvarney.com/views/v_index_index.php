@@ -2,7 +2,21 @@
 	<h1>Today's Chore List</h1>
 	<!-- The area where chores are added -->
 	<div id="left-side">
-		Text for the left side
+		<!-- Due Date -->
+		<h2>Time:</h2>
+		Chores should be completed by :
+		<input type="text" id="time">
+		
+		<br>
+		
+		<!-- Reward -->
+		<h2>Reward:</h2>
+		Reward for completing the chores by the set time:
+		<br>
+		
+		<!-- Chore List -->
+		<h2>Add Chores:</h2>
+		<br>
 	
 	</div>
 	
