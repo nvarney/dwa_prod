@@ -1,0 +1,51 @@
+
+#wrapper {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#left-side {
+	width: 450px;
+	margin-right: 50px;
+	float: left;
+}
+
+#right-side {
+	width: 500px;
+	float: left;
+}
+
+.footer {
+	clear:both;
+}
+
+#chore-page {
+	border: 1px solid black;
+	/*background-image:url("/img/paper.gif");
+	background-repeat: repeat-y;*/
+	background-color: Cornsilk;
+	height: 500px;
+}
+
+#chore-timer {
+	float: right;
+	color: red;
+	margin-right: 10px;
+}
+
+#chore-reward{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#chore-list {
+	margin-left: 50px;
+}
