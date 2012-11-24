@@ -16,6 +16,9 @@ $(document).ready(function() {
 
 	/*-- Hide the pause button --*/
 	$('#pause').hide();
+	
+	/*-- Hide chore entry --*/
+	$('#chore-entry').hide();
 
 	/*-- Functions to set chore timer --*/
    $(function() {
@@ -56,17 +59,42 @@ $(document).ready(function() {
 		$('#chore-reward').html("<h2> Your reward: </h2><br>" + rewardval);
 	});
 
-	/*-- Function to add chore to list --*/
+	/*-- Function to show chore add box --*/
 	$('#add-chore').click(function() {
+		$('#chore-entry').show();
+	});
 	
-		// Figure out what message we should enter
-		var choreval = $('#chore').val();
+	/*-- Function to clear chore description box --*/
+	$('#chore-desc').click(function() {
+		$('#chore-desc').html("");
+	});
+	
+	/*-- Function to add chore to list --*/
+	$('#chore-submit').click(function() {
+		// variable for holding our chore string
+		var chorestring = "";
+		
+		// Add chore name
+		chorestring = "<li>"+$('#chore-name').val()+"<br>";
+		
+		// Split chore description
+		var chore = $('#chore-desc').val().split("\n");
+		
+		// Add chore description
+		$.each(chore, function() {
+			chorestring = chorestring + this + "<br>";
+		});
+		
+		// Add chore end
+			chorestring = chorestring + "</li>";
 		
 		// Add the chore to the list	
-		$('#chore-entries').append("<li>" + choreval + "</li>");
+		$('#chore-entries').append(chorestring);
 		
 		// Clear the box for the next chore
-		$('#chore').val("");
+		$('#chore-name').val("");
+		$('#chore-desc').val("");
+		
 		
 	});
 	

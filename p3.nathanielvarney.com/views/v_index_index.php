@@ -24,9 +24,14 @@
 		
 		<!-- Chore List -->
 		<h2>Add Chores:</h2>
-		<input type="text" id="chore">
 		<input type="button" id="add-chore" value="Add chore">
+		<div id="chore-entry">
+		<input type="text"  id="chore-name">
 		<br>
+		<textarea id="chore-desc" rows="5" cols="50">Enter chore description</textarea>
+		<br>
+		<input type="button" id="chore-submit" value="Add">
+		</div>
 		
 		<!-- Start -->
 		<h2>Ready?</h2>
