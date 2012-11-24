@@ -138,5 +138,25 @@ $(document).ready(function() {
 		}
 	});
 	
+	/*-- Function to print chore list --*/
+	/*-- Taken from Susan's awesome card generator--*/
+	$('#print-button').click(function() {
+		
+		// Setup the window we're about to open	    
+	    var print_window =  window.open('','_blank','');
+	    
+	    // Get the content we want to put in that window - this line is a little tricky to understand, but it gets the job done
+	    var contents = $('<div>').html($('#right-side').clone()).html();
+	    
+	    // Build the HTML content for that window, including the contents
+	    var html = '<html><head><link rel="stylesheet" href="/css/chores.css" type="text/css"></head><body>' + contents + '</body></html>';
+	    
+	    // Write to our new window
+	    print_window.document.open();
+	    print_window.document.write(html);
+	    print_window.document.close();
+	    		
+	});
+	
 
 });
