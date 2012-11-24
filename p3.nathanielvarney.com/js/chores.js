@@ -16,11 +16,13 @@ $(document).ready(function() {
 
 	/*-- Functions to set chore timer --*/
 	$('#chore-h').keyup(function() {
-		$('#chore-timer').html("Time remaining: " + $('#chore-h').val() + ":" + $('#chore-m').val());
+		var timeval = "Time remaining: " + pad($('#chore-h').val(), 2) + ":" + pad($('#chore-m').val(),2);
+		$('#chore-timer').html(timeval);
 	});
 	
 	$('#chore-m').keyup(function() {
-		$('#chore-timer').html("Time remaining: " + $('#chore-h').val() + ":" + $('#chore-m').val());
+		var timeval = "Time remaining: " + pad($('#chore-h').val(), 2) + ":" + pad($('#chore-m').val(),2);
+		$('#chore-timer').html(timeval);
 	});
 	
 	
@@ -50,25 +52,32 @@ $(document).ready(function() {
 	
 	/*-- Function to start chore timer --*/
 	/*-- Thanks to http://jchavannes.com/jquery-timer/demo --*/
+	var countdownTimer = "";
 	$('#start').click(function() {
-		var countdownTimer
-		var countdownCurrent = (($('#chore-h').val() * 360000) + ($('#chore-m').val() * 6000));
-		countdownTimer = $.timer(function() {
-		var min = parseInt(countdownCurrent/6000);
+		if (countdownTimer == "") {
+			var countdownCurrent = (($('#chore-h').val() * 360000) + ($('#chore-m').val() * 6000));
+			countdownTimer = $.timer(function() {
+		var hour = parseInt (countdownCurrent/360000);
+		var min = parseInt(countdownCurrent/6000)-(hour*60);
 		var sec = parseInt(countdownCurrent/100)-(min*60);
-		var micro = pad(countdownCurrent-(sec*100)-(min*6000),2);
+		//var micro = pad(countdownCurrent-(sec*100)-(min*6000),2);
 		var output = "00"; if(min > 0) {output = pad(min,2);}
-		$('#chore-timer').html(output+":"+pad(sec,2)+":"+micro);
+		$('#chore-timer').html(pad(hour,2)+":"+output+":"+pad(sec,2));
 		if(countdownCurrent == 0) {
 			countdownTimer.stop();
-			alert('Example 2: Countdown timer complete!');
+			alert('Time\'s up. Let\'s see if everything is finished.');
 		} else {
 			countdownCurrent-=7;
 			if(countdownCurrent < 0) {countdownCurrent=0;}
 		}
 	}, 70, true);
-	$('#example2submit').bind('keyup', function(e) {if(e.keyCode == 13) {countdownReset();}});
-	
+			$('#start').prop('value','Stop');
+		} else {
+			countdownTimer.stop();
+			countdownTimer = ""
+			$('#start').prop('value','Start');
+		}
+		
 
 	});
 
