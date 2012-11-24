@@ -33,8 +33,8 @@
 		<br>
 		<input type="text"  id="chore-name">
 		<br>
-		Chore Requirements (press enter to separate):
-		<textarea id="chore-desc" rows="5" cols="50"></textarea>
+		Chore Requirements:
+		<textarea id="chore-desc" rows="5" cols="50" title="Seperate tasks with a return"></textarea>
 		<br>
 		<input type="button" id="chore-submit" value="Add">
 		</div>
@@ -62,11 +62,8 @@
 			<h2> Your reward: </h2>
 			</div>
 			<div id="chore-list">
-				<ul>
 				<div id="chore-entries">
-					<!--<li>Clean dishes</li>-->
 				</div>
-				</ul>
 			</div>
 		</div>
 	</div>

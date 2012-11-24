@@ -16,7 +16,9 @@
 	<script type="text/javascript" src="js/chores.js"></script>			
 	
 	<!-- Controller Specific JS/CSS -->
+	<!-- Omitting because none are needed
 	<?=@$client_files; ?>
+	-->
 	
 </head>
 

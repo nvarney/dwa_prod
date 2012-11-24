@@ -11,6 +11,14 @@ function countdownReset() {
 	if(newCount > 0) {countdownCurrent = newCount;}
 	countdownTimer.stop().once();
 }
+	
+$(document).ready(function() {	
+	try {
+    	return 'localStorage' in window && window['localStorage'] !== null;
+  	} catch (e) {
+    	alert("Your browser does not support local storage. Please access this page from a modern browser.");
+  	}
+});
 
 $(document).ready(function() {
 
@@ -76,18 +84,18 @@ $(document).ready(function() {
 		var chorestring = "";
 		
 		// Add chore name
-		chorestring = "<li>"+$('#chore-name').val()+"<br>";
+		chorestring = "<div class='chore'>"+"<input type='checkbox'>"+$('#chore-name').val()+"</div>";
 		
 		// Split chore description
 		var chore = $('#chore-desc').val().split("\n");
 		
 		// Add chore description
 		$.each(chore, function() {
-			chorestring = chorestring +"<div class='task'>"+"<input type='checkbox'>"+ this + "</div>";
+			chorestring = chorestring +"<div class='chore task'>"+"<input type='checkbox'>"+ this + "</div>";
 		});
 		
-		// Add chore end
-			chorestring = chorestring + "</li>";
+		// Add to local storage
+		localStorage["chore."+$('#chore-name').val()] = chorestring;
 		
 		// Add the chore to the list	
 		$('#chore-entries').append(chorestring);
@@ -99,8 +107,9 @@ $(document).ready(function() {
 	});
 	
 	/* Function to grey out completed tasks */
-	$('.task').live('click', function() {
+	$('.chore').live('click', function() {
 		$(this).css('color', 'grey');
+		$(this).css('text-decoration', 'line-through');
 	});
 	
 	/*-- Function to start chore timer --*/
