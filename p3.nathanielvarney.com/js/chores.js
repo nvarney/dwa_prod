@@ -17,8 +17,8 @@ $(document).ready(function() {
 	/*-- Hide the pause button --*/
 	$('#pause').hide();
 	
-	/*-- Hide chore entry --*/
-	$('#chore-entry').hide();
+	/*-- Hide chore entry (no longer used)--*/
+	//$('#chore-entry').hide();
 
 	/*-- Functions to set chore timer --*/
    $(function() {
@@ -59,10 +59,11 @@ $(document).ready(function() {
 		$('#chore-reward').html("<h2> Your reward: </h2><br>" + rewardval);
 	});
 
-	/*-- Function to show chore add box --*/
+	/*-- Function to show chore add box (no longer used)
 	$('#add-chore').click(function() {
 		$('#chore-entry').show();
 	});
+	--*/
 	
 	/*-- Function to clear chore description box --*/
 	$('#chore-desc').click(function() {
@@ -82,7 +83,7 @@ $(document).ready(function() {
 		
 		// Add chore description
 		$.each(chore, function() {
-			chorestring = chorestring + this + "<br>";
+			chorestring = chorestring +"<div class='task'>"+"<input type='checkbox'>"+ this + "</div>";
 		});
 		
 		// Add chore end
@@ -94,8 +95,12 @@ $(document).ready(function() {
 		// Clear the box for the next chore
 		$('#chore-name').val("");
 		$('#chore-desc').val("");
-		
-		
+			
+	});
+	
+	/* Function to grey out completed tasks */
+	$('.task').live('click', function() {
+		$(this).css('color', 'grey');
 	});
 	
 	/*-- Function to start chore timer --*/

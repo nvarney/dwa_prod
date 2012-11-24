@@ -24,7 +24,10 @@
 		
 		<!-- Chore List -->
 		<h2>Add Chores:</h2>
+		<!-- Don't want the add chore button anymore
 		<input type="button" id="add-chore" value="Add chore">
+		-->
+		
 		<div id="chore-entry">
 		<input type="text"  id="chore-name">
 		<br>

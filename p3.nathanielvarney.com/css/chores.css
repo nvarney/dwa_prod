@@ -31,7 +31,7 @@ h1 {
 	/*background-image:url("/img/paper.gif");
 	background-repeat: repeat-y;*/
 	background-color: Cornsilk;
-	height: 500px;
+	min-height: 500px;
 }
 
 #chore-timer {
@@ -62,4 +62,12 @@ h1 {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	width: 250px;	
+}
+
+.task {
+	color: blue;
+}
+
+.clear {
+	clear:both;
 }
