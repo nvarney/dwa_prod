@@ -14,6 +14,9 @@ function countdownReset() {
 
 $(document).ready(function() {
 
+	/*-- Hide the pause button --*/
+	$('#pause').hide();
+
 	/*-- Functions to set chore timer --*/
 	$('#chore-h').keyup(function() {
 		var timeval = "Time remaining: " + pad($('#chore-h').val(), 2) + ":" + pad($('#chore-m').val(),2);
@@ -50,21 +53,6 @@ $(document).ready(function() {
 		
 	});
 	
-	/*-- Chore timer function --*/
-	/*-- Thanks to jquery-countdown.googlecode.com --*/
-	/*-- Commenting out pretty one
-	$('#start').click(function() {
-		$('#chore-timer').countdown({
-			image: '/img/digits.png',
-			startTime: '00:00',
-			//timeEnd: function() { alert('Timer has ended!'); },
-			format: 'hh:mm:ss',
-			digitHeight: 50,
-			digitWidth: 30
-		});
-	});
-	--*/
-	
 	/*-- Function to start chore timer --*/
 	/*-- Thanks to http://jchavannes.com/jquery-timer/demo --*/
 	
@@ -88,13 +76,16 @@ $(document).ready(function() {
 				}
 			}, 70, true);
 			$('#start').prop('value','Stop');
+			$('#pause').show();
+			$('#pause').click(function() {
+				countdownTimer.toggle();
+			});
 		} else {
 			countdownTimer.stop();
 			countdownTimer = ""
 			$('#start').prop('value','Start');
+			$('#pause').hide();
 		}
-		
-
 	});
 	
 

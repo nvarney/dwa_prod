@@ -27,6 +27,7 @@
 		<!-- Start -->
 		<h2>Ready?</h2>
 		<input type="button" id="start" value="Start">
+		<input type="button" id="pause" value="Pause">
 		<br>
 	
 	</div>
