@@ -27,6 +27,9 @@ $(document).ready(function() {
 		// Add the chore to the list	
 		$('#chore-entries').append("<li>" + choreval + "</li>");
 		
+		// Clear the box for the next chore
+		$('#chore').val("");
+		
 	});
 
 
