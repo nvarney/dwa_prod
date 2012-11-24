@@ -27,7 +27,9 @@
 		<!-- Don't want the add chore button anymore
 		<input type="button" id="add-chore" value="Add chore">
 		-->
-		
+		<input type="button" id="load-chores" value="Load saved chores">
+		<div id="saved-chores"></div>
+		<br>
 		<div id="chore-entry">
 		Chore Name:
 		<br>

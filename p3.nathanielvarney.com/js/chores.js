@@ -78,6 +78,21 @@ $(document).ready(function() {
 		$('#chore-desc').html("");
 	});
 	
+	/*-- Function to load saved chores list --*/
+	$('#load-chores').click(function() {
+		for (var i = 0; i < localStorage.length; i++){
+    		$('#saved-chores').append("<input class='loaded-chores' type='button' value='"+localStorage.key(i)+"'>");
+		}
+		$('#load-chores').hide();
+	});	
+	
+	/* Function to add saved chores to list */
+	$('.loaded-chores').live('click', function() {
+		var index = $(this).val();
+		$('#chore-entries').append(localStorage.getItem(index));
+		$(this).hide();
+	});
+	
 	/*-- Function to add chore to list --*/
 	$('#chore-submit').click(function() {
 		// variable for holding our chore string
@@ -95,7 +110,7 @@ $(document).ready(function() {
 		});
 		
 		// Add to local storage
-		localStorage["chore."+$('#chore-name').val()] = chorestring;
+		localStorage[$('#chore-name').val()] = chorestring;
 		
 		// Add the chore to the list	
 		$('#chore-entries').append(chorestring);
