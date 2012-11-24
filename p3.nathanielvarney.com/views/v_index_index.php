@@ -7,9 +7,13 @@
 		Time to complete chores:
 		<br>
 		Hours:
-		<input type="text" id="chore-h" value="0" size="2">
+		<input type="text" class="time-select" id="chore-h" disabled="disabled">
+		<br>
+		<div class="time-slider" id="hour-slider"></div>
 		Minutes:
-		<input type="text" id="chore-m" value="0" size="2">
+		<input type="text" class="time-select" id="chore-m" disabled="disabled">
+		<br>
+		<div class="time-slider" id="min-slider"></div>
 		<br>
 		
 		<!-- Reward -->
@@ -36,15 +40,15 @@
 	<div id="right-side">
 		<div id="chore-page">
 			<div id="chore-timer">
-			due at 12:00pm
+			Time remaining:
 			</div>
 			<div id="chore-reward">
-			five dollars
+			<h2> Your reward: </h2>
 			</div>
 			<div id="chore-list">
 				<ul>
 				<div id="chore-entries">
-					<li>Clean dishes</li>
+					<!--<li>Clean dishes</li>-->
 				</div>
 				</ul>
 			</div>

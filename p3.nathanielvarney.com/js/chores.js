@@ -18,10 +18,44 @@ $(document).ready(function() {
 	$('#pause').hide();
 
 	/*-- Functions to set chore timer --*/
+   $(function() {
+        $( "#hour-slider" ).slider({
+            orientation: "horizontal",
+            min: 0,
+            max: 24,
+            value: 0,
+            slide: function( event, ui ) {
+                $( "#chore-h" ).val( ui.value );
+                var timeval = "Time remaining: " + pad($('#chore-h').val(), 2) + ":" + pad($('#chore-m').val(),2);
+				$('#chore-timer').html(timeval);
+            }
+        });
+        $( "#chore-h" ).val( $( "#hour-slider" ).slider( "value" ) );
+        $( "#min-slider" ).slider({
+            orientation: "horizontal",
+            min: 0,
+            max: 55,
+            step: 5,
+            value: 0,
+            slide: function( event, ui ) {
+                $( "#chore-m" ).val( ui.value );
+                var timeval = "Time remaining: " + pad($('#chore-h').val(), 2) + ":" + pad($('#chore-m').val(),2);
+				$('#chore-timer').html(timeval);
+            }
+        });
+        
+        $( "#chore-m" ).val( $( "#min-slider" ).slider( "value" ) );      
+    });
+	
+	/*-- Trying hour slider
 	$('#chore-h').keyup(function() {
+		if ((IsNumeric($('#chore-h').val()))&&($('#chore-h').val()>= 0)){
 		var timeval = "Time remaining: " + pad($('#chore-h').val(), 2) + ":" + pad($('#chore-m').val(),2);
 		$('#chore-timer').html(timeval);
+		} else {
+		}
 	});
+	--*/
 	
 	$('#chore-m').keyup(function() {
 		var timeval = "Time remaining: " + pad($('#chore-h').val(), 2) + ":" + pad($('#chore-m').val(),2);
@@ -66,7 +100,7 @@ $(document).ready(function() {
 				var sec = parseInt(countdownCurrent/100)-(hour*3600)-(min*60);
 				//var micro = pad(countdownCurrent-(sec*100)-(min*6000),2);
 				//var output = "00"; if(min > 0) {output = pad(min,2);}
-				$('#chore-timer').html(pad(hour,2)+":"+pad(min,2)+":"+pad(sec,2));
+				$('#chore-timer').html("Time remaining: "+pad(hour,2)+":"+pad(min,2)+":"+pad(sec,2));
 				if(countdownCurrent == 0) {
 					countdownTimer.stop();
 					alert('Time\'s up. Let\'s see if everything is finished.');
