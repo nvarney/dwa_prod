@@ -4,8 +4,8 @@
 	<div id="left-side">
 		<!-- Due Date -->
 		<h2>Time:</h2>
-		Chores should be completed by :
-		<input type="text" id="time">
+		Time to complete chores:
+		<input type="text" id="time" value="60">
 		<br>
 		
 		<!-- Reward -->
