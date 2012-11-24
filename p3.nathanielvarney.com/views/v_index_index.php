@@ -5,7 +5,11 @@
 		<!-- Due Date -->
 		<h2>Time:</h2>
 		Time to complete chores:
-		<input type="text" id="time" value="60">
+		<br>
+		Hours:
+		<input type="text" id="chore-h" value="0" size="2">
+		Minutes:
+		<input type="text" id="chore-m" value="0" size="2">
 		<br>
 		
 		<!-- Reward -->

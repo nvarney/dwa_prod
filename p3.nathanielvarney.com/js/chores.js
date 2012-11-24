@@ -14,14 +14,16 @@ function countdownReset() {
 
 $(document).ready(function() {
 
-	/*-- Function to set chore timer --*/
-	$('#time').keyup(function() {
-	
-		// Figure out what message we should enter
-		var timeval = $(this).val();
-			
-		$('#chore-timer').html("Due at: " + timeval);
+	/*-- Functions to set chore timer --*/
+	$('#chore-h').keyup(function() {
+		$('#chore-timer').html("Time remaining: " + $('#chore-h').val() + ":" + $('#chore-m').val());
 	});
+	
+	$('#chore-m').keyup(function() {
+		$('#chore-timer').html("Time remaining: " + $('#chore-h').val() + ":" + $('#chore-m').val());
+	});
+	
+	
 	
 	/*-- Function to set reward --*/
 	$('#reward').keyup(function() {
@@ -47,6 +49,7 @@ $(document).ready(function() {
 	});
 	
 	/*-- Function to start chore timer --*/
+	/*-- Thanks to http://jchavannes.com/jquery-timer/demo --*/
 	$('#start').click(function() {
 		var countdownTimer
 		var countdownCurrent = $('#time').val();
