@@ -80,10 +80,14 @@ $(document).ready(function() {
 	
 	/*-- Function to load saved chores list --*/
 	$('#load-chores').click(function() {
-		for (var i = 0; i < localStorage.length; i++){
-    		$('#saved-chores').append("<input class='loaded-chores' type='button' value='"+localStorage.key(i)+"'>");
+		if (localStorage.length <= 0) {
+			alert("You haven't saved any chores yet. Add a chore to save it.");
+		} else {		
+			for (var i = 0; i < localStorage.length; i++){
+    			$('#saved-chores').append("<input class='loaded-chores' type='button' value='"+localStorage.key(i)+"'>");
+			}
+			$('#load-chores').hide();
 		}
-		$('#load-chores').hide();
 	});	
 	
 	/* Function to add saved chores to list */
