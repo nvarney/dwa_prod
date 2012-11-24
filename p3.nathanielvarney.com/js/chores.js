@@ -50,8 +50,24 @@ $(document).ready(function() {
 		
 	});
 	
+	/*-- Chore timer function --*/
+	/*-- Thanks to jquery-countdown.googlecode.com --*/
+	/*-- Commenting out pretty one
+	$('#start').click(function() {
+		$('#chore-timer').countdown({
+			image: '/img/digits.png',
+			startTime: '00:00',
+			//timeEnd: function() { alert('Timer has ended!'); },
+			format: 'hh:mm:ss',
+			digitHeight: 50,
+			digitWidth: 30
+		});
+	});
+	--*/
+	
 	/*-- Function to start chore timer --*/
 	/*-- Thanks to http://jchavannes.com/jquery-timer/demo --*/
+	
 	var countdownTimer = "";
 	$('#start').click(function() {
 		if (countdownTimer == "") {
@@ -59,10 +75,10 @@ $(document).ready(function() {
 			countdownTimer = $.timer(function() {
 				var hour = parseInt (countdownCurrent/360000);
 				var min = parseInt(countdownCurrent/6000)-(hour*60);
-				var sec = parseInt(countdownCurrent/100)-(hour*360)-(min*60);
+				var sec = parseInt(countdownCurrent/100)-(hour*3600)-(min*60);
 				//var micro = pad(countdownCurrent-(sec*100)-(min*6000),2);
-				var output = "00"; if(min > 0) {output = pad(min,2);}
-				$('#chore-timer').html(pad(hour,2)+":"+output+":"+pad(sec,2));
+				//var output = "00"; if(min > 0) {output = pad(min,2);}
+				$('#chore-timer').html(pad(hour,2)+":"+pad(min,2)+":"+pad(sec,2));
 				if(countdownCurrent == 0) {
 					countdownTimer.stop();
 					alert('Time\'s up. Let\'s see if everything is finished.');
@@ -70,7 +86,7 @@ $(document).ready(function() {
 					countdownCurrent-=7;
 					if(countdownCurrent < 0) {countdownCurrent=0;}
 				}
-			}, 60, true);
+			}, 70, true);
 			$('#start').prop('value','Stop');
 		} else {
 			countdownTimer.stop();
@@ -80,6 +96,6 @@ $(document).ready(function() {
 		
 
 	});
-
+	
 
 });
