@@ -52,7 +52,7 @@ $(document).ready(function() {
 	/*-- Thanks to http://jchavannes.com/jquery-timer/demo --*/
 	$('#start').click(function() {
 		var countdownTimer
-		var countdownCurrent = $('#time').val();
+		var countdownCurrent = (($('#chore-h').val() * 360000) + ($('#chore-m').val() * 6000));
 		countdownTimer = $.timer(function() {
 		var min = parseInt(countdownCurrent/6000);
 		var sec = parseInt(countdownCurrent/100)-(min*60);
