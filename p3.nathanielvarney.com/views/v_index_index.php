@@ -29,9 +29,12 @@
 		-->
 		
 		<div id="chore-entry">
+		Chore Name:
+		<br>
 		<input type="text"  id="chore-name">
 		<br>
-		<textarea id="chore-desc" rows="5" cols="50">Enter chore description</textarea>
+		Chore Requirements (press enter to separate):
+		<textarea id="chore-desc" rows="5" cols="50"></textarea>
 		<br>
 		<input type="button" id="chore-submit" value="Add">
 		</div>
