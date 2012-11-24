@@ -6,16 +6,23 @@
 		<h2>Time:</h2>
 		Chores should be completed by :
 		<input type="text" id="time">
-		
 		<br>
 		
 		<!-- Reward -->
 		<h2>Reward:</h2>
 		Reward for completing the chores by the set time:
+		<input type="text" id="reward">
 		<br>
 		
 		<!-- Chore List -->
 		<h2>Add Chores:</h2>
+		<input type="text" id="chore">
+		<input type="button" id="add-chore" value="Add chore">
+		<br>
+		
+		<!-- Start -->
+		<h2>Ready?</h2>
+		<input type="button" id="start" value="Start">
 		<br>
 	
 	</div>
@@ -30,7 +37,11 @@
 			five dollars
 			</div>
 			<div id="chore-list">
-			run dishwasher
+				<ul>
+				<div id="chore-entries">
+					<li>Clean dishes</li>
+				</div>
+				</ul>
 			</div>
 		</div>
 	</div>
