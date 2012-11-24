@@ -47,30 +47,13 @@ $(document).ready(function() {
         $( "#chore-m" ).val( $( "#min-slider" ).slider( "value" ) );      
     });
 	
-	/*-- Trying hour slider
-	$('#chore-h').keyup(function() {
-		if ((IsNumeric($('#chore-h').val()))&&($('#chore-h').val()>= 0)){
-		var timeval = "Time remaining: " + pad($('#chore-h').val(), 2) + ":" + pad($('#chore-m').val(),2);
-		$('#chore-timer').html(timeval);
-		} else {
-		}
-	});
-	--*/
-	
-	$('#chore-m').keyup(function() {
-		var timeval = "Time remaining: " + pad($('#chore-h').val(), 2) + ":" + pad($('#chore-m').val(),2);
-		$('#chore-timer').html(timeval);
-	});
-	
-	
-	
 	/*-- Function to set reward --*/
 	$('#reward').keyup(function() {
 	
 		// Figure out what message we should enter
 		var rewardval = $(this).val();
 			
-		$('#chore-reward').html("You will get: " + rewardval);
+		$('#chore-reward').html("<h2> Your reward: </h2><br>" + rewardval);
 	});
 
 	/*-- Function to add chore to list --*/
