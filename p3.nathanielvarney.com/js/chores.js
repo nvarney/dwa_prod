@@ -57,20 +57,20 @@ $(document).ready(function() {
 		if (countdownTimer == "") {
 			var countdownCurrent = (($('#chore-h').val() * 360000) + ($('#chore-m').val() * 6000));
 			countdownTimer = $.timer(function() {
-		var hour = parseInt (countdownCurrent/360000);
-		var min = parseInt(countdownCurrent/6000)-(hour*60);
-		var sec = parseInt(countdownCurrent/100)-(min*60);
-		//var micro = pad(countdownCurrent-(sec*100)-(min*6000),2);
-		var output = "00"; if(min > 0) {output = pad(min,2);}
-		$('#chore-timer').html(pad(hour,2)+":"+output+":"+pad(sec,2));
-		if(countdownCurrent == 0) {
-			countdownTimer.stop();
-			alert('Time\'s up. Let\'s see if everything is finished.');
-		} else {
-			countdownCurrent-=7;
-			if(countdownCurrent < 0) {countdownCurrent=0;}
-		}
-	}, 70, true);
+				var hour = parseInt (countdownCurrent/360000);
+				var min = parseInt(countdownCurrent/6000)-(hour*60);
+				var sec = parseInt(countdownCurrent/100)-(hour*360)-(min*60);
+				//var micro = pad(countdownCurrent-(sec*100)-(min*6000),2);
+				var output = "00"; if(min > 0) {output = pad(min,2);}
+				$('#chore-timer').html(pad(hour,2)+":"+output+":"+pad(sec,2));
+				if(countdownCurrent == 0) {
+					countdownTimer.stop();
+					alert('Time\'s up. Let\'s see if everything is finished.');
+				} else {
+					countdownCurrent-=7;
+					if(countdownCurrent < 0) {countdownCurrent=0;}
+				}
+			}, 60, true);
 			$('#start').prop('value','Stop');
 		} else {
 			countdownTimer.stop();
