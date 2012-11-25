@@ -25,8 +25,9 @@ $(document).ready(function() {
 	/*-- Hide the pause button --*/
 	$('#pause').hide();
 	
-	/*-- Hide chore entry (no longer used)--*/
-	//$('#chore-entry').hide();
+	/*-- Hide error messages--*/
+	$('#reward-error').hide();
+	$('#chore-error').hide();
 
 	/*-- Functions to set chore timer --*/
    $(function() {
@@ -63,8 +64,20 @@ $(document).ready(function() {
 	
 		// Figure out what message we should enter
 		var rewardval = $(this).val();
-			
-		$('#chore-reward').html("<h2> Reward: </h2>" + rewardval);
+		
+		// Check for too many characters - Thanks Susan
+		var length = rewardval.length;
+		if(length == 20) {
+			$('#reward-error').html("The max amount of characters is 20");
+			$('#reward-error').show();
+		}
+		else {
+			$('#reward-error').html("");
+			$('#reward-error').hide();	
+		
+			// Set element value
+			$('#chore-reward').html("<h3>Reward: " + rewardval + "</h3>");
+		}
 	});
 	
 	/*-- Function to load saved chores list --*/
@@ -89,6 +102,21 @@ $(document).ready(function() {
 		var index = $(this).val();
 		$('#chore-entries').append(localStorage.getItem(index));
 		$(this).hide();
+	});
+	
+	/*-- Function to check chore description --*/
+	$('#chore-name').keyup(function() {
+		// Check for too many characters - Thanks Susan
+		var name = $(this).val();
+		var length = name.length;
+		if(length == 20) {
+			$('#chore-error').html("The max amount of characters is 20");
+			$('#chore-error').show();
+		}
+		else {
+			$('#chore-error').html("");
+			$('#chore-error').hide();
+		}	
 	});
 	
 	/*-- Function to add chore to list --*/
@@ -137,7 +165,20 @@ $(document).ready(function() {
 	
 	var countdownTimer = "";
 	$('#start').click(function() {
-		if (countdownTimer == "") {
+		// Check if time has been chosen
+		if ($('#chore-timer').html()=="") {
+			alert("You need to enter a time.");
+			
+		// Check if reward has been entered	
+		} else if ($('#chore-reward').html()=="") {
+			alert("You need to enter a reward.");
+			
+		// Check if at least one chore is on the list
+		} else if ($('#chore-entries').html()=="") {
+			alert("You need to enter at least one chore.");
+		
+		// Start the timer
+		} else if (countdownTimer == "") {
 			var countdownCurrent = (($('#chore-h').val() * 360000) + ($('#chore-m').val() * 6000));
 			countdownTimer = $.timer(function() {
 				var hour = parseInt (countdownCurrent/360000);
@@ -154,16 +195,27 @@ $(document).ready(function() {
 					if(countdownCurrent < 0) {countdownCurrent=0;}
 				}
 			}, 70, true);
+			// Change button text
 			$('#start').prop('value','Stop');
+			
+			// Disallow adding chores
+			$('#load-chores').prop('disabled','true');
+			$('#chore-submit').prop('disabled','true');
+			
+			// Show pause button
 			$('#pause').show();
 			$('#pause').click(function() {
 				countdownTimer.toggle();
 			});
+			
+		//	Stop the timer and reset the buttons
 		} else {
 			countdownTimer.stop();
 			countdownTimer = ""
 			$('#start').prop('value','Start');
 			$('#pause').hide();
+			$('#load-chores').prop('disabled','');
+			$('#chore-submit').prop('disabled','');
 		}
 	});
 	

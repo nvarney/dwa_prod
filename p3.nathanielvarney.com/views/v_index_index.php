@@ -21,7 +21,8 @@
 		<h2>Reward:</h2>
 		Reward for completing the chores by the set time:
 		<br>
-		<input class="text-field" type="text" id="reward">
+		<input class="text-field" type="text" id="reward" maxlength="20">
+		<div class="error" id="reward-error"></div>
 		<br>
 		<br>
 		
@@ -36,7 +37,8 @@
 		<div id="chore-entry">
 		Chore Name:
 		<br>
-		<input type="text" class="text-field"  id="chore-name">
+		<input type="text" class="text-field"  id="chore-name" maxlength="20">
+		<div class="error" id="chore-error"></div>
 		<br>
 		<br>
 		Chore Requirements:
@@ -64,15 +66,11 @@
 	<!-- The chore list -->
 	<div id="right-side">
 		<div id="chore-page">
-			<div id="chore-timer">
-			Time remaining:
-			</div>
-			<div id="chore-reward">
-			<h2> Reward: </h2>
-			</div>
+			<h3>To Do:</h3>
+			<div id="chore-timer"></div>
+			<div id="chore-reward"></div>
 			<div id="chore-list">
-				<div id="chore-entries">
-				</div>
+				<div id="chore-entries"></div>
 			</div>
 		</div>
 	</div>
