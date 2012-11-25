@@ -1,25 +1,53 @@
+body {
+	background-color: black;
+	color: white;
+	font-family: arial;
+}
+
+.button {
+	background-color: #555555;
+	color: white;
+	border-radius: 5px;
+}
+
+.text-field {
+	color: white;
+	font-size: 12px;
+	background-color: #555555;
+	border: 1px solid orange;
+}
 
 #wrapper {
 	width: 1000px;
-	margin: 0px auto;
+	margin: 10px auto;
+	border-radius: 10px;
+	background-color: #333333;
 }
 
 h1 {
 	text-align: center;
 	font-size: 30px;
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
+}
+h2 {
+	color: orange;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 #left-side {
 	width: 450px;
 	margin-right: 50px;
+	margin-left: 50px;
 	float: left;
 }
 
 #right-side {
-	width: 500px;
+	width: 450px;
 	float: left;
+	color: black;
 }
 
 .footer {
@@ -28,40 +56,43 @@ h1 {
 
 #chore-page {
 	border: 1px solid black;
-	/*background-image:url("/img/paper.gif");
-	background-repeat: repeat-y;*/
-	background-color: Cornsilk;
+	background-color: white;
 	min-height: 600px;
+	margin-bottom: 50px;
+	margin-right: 50px;
+	
 }
 
 #chore-timer {
 	font-size: 20px;
-	text-align: right;
+	text-align: center;
 	color: red;
-	margin-right: 10px;
-	margin-top: 5px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 #chore-reward{
-	text-align: center;
+	text-align: left;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	margin-left: 10px;
 }
 
 #chore-list {
-	margin-left: 50px;
+	margin-left: 10px;
 }
 
 .time-select {
 	border: 0px;
 	color: orange;
+	background-color: #333333;
 	font-weight: bold;
 }
 
 .time-slider {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	width: 250px;	
+	width: 250px;
 }
 
 .chore{
@@ -71,8 +102,7 @@ h1 {
 
 .task {
 	font-size: 10px;
-	margin-left: 20px;
-	color: blue;
+	margin-left: 10px;
 }
 
 .clear {

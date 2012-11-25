@@ -64,18 +64,7 @@ $(document).ready(function() {
 		// Figure out what message we should enter
 		var rewardval = $(this).val();
 			
-		$('#chore-reward').html("<h2> Your reward: </h2><br>" + rewardval);
-	});
-
-	/*-- Function to show chore add box (no longer used)
-	$('#add-chore').click(function() {
-		$('#chore-entry').show();
-	});
-	--*/
-	
-	/*-- Function to clear chore description box --*/
-	$('#chore-desc').click(function() {
-		$('#chore-desc').html("");
+		$('#chore-reward').html("<h2> Reward: </h2>" + rewardval);
 	});
 	
 	/*-- Function to load saved chores list --*/
@@ -84,11 +73,16 @@ $(document).ready(function() {
 			alert("You haven't saved any chores yet. Add a chore to save it.");
 		} else {		
 			for (var i = 0; i < localStorage.length; i++){
-    			$('#saved-chores').append("<input class='loaded-chores' type='button' value='"+localStorage.key(i)+"'>");
+    			$('#saved-chores').append("<input class='button loaded-chores' type='button' value='"+localStorage.key(i)+"'>");
 			}
 			$('#load-chores').hide();
 		}
 	});	
+	
+	/*-- Function to clear saved chores from storage --*/
+	$('#clear-storage').click(function() {
+		localStorage.clear();
+	});
 	
 	/* Function to add saved chores to list */
 	$('.loaded-chores').live('click', function() {
@@ -127,8 +121,15 @@ $(document).ready(function() {
 	
 	/* Function to grey out completed tasks */
 	$('.chore').live('click', function() {
-		$(this).css('color', 'grey');
-		$(this).css('text-decoration', 'line-through');
+		if ($(this).css('text-decoration')=='line-through') {
+			$(this).find('input').attr('checked', false);
+			$(this).css('color', 'black');
+			$(this).css('text-decoration', 'none');
+		} else {
+			$(this).find('input').attr('checked', true);
+			$(this).css('color', 'grey');
+			$(this).css('text-decoration', 'line-through');
+		}
 	});
 	
 	/*-- Function to start chore timer --*/

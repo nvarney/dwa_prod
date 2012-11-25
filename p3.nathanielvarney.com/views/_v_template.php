@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 
 	<link rel="stylesheet" href="css/chores.css" type="text/css">
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+	<link href="/css/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css">
 	
 	<!-- JS -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
