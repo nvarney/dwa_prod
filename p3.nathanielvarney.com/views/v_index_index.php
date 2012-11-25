@@ -57,9 +57,13 @@
 		<!-- Print Button -->
 		<input type="button" class="button" id="print-button" value="Print">
 		
+		<!-- Clear the page -->
+		<input type="button" class="button" id="clear-page" value="Clear Page">
+		
 		<!-- Clear the saved chores -->
 		<input type="button" class="button" id="clear-storage" value="Delete saved chores">
 		<br>
+		
 	
 	</div>
 	

@@ -239,5 +239,10 @@ $(document).ready(function() {
 	    		
 	});
 	
+	/*-- Function to clear the page (by reloading) --*/
+	$('#clear-page').click(function() {
+		history.go(0);
+	});
+	
 
 });
