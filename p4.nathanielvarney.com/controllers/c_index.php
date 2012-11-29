@@ -16,7 +16,7 @@ class index_controller extends base_controller {
 			$this->template->content = View::instance('v_index_index');
 			
 		# Now set the <title> tag
-			$this->template->title = "DWA: Project 3";
+			$this->template->title = "DWA: Project 4";
 	
 		# If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
 			$client_files = Array(
@@ -33,7 +33,7 @@ class index_controller extends base_controller {
 	public function proposal() {
 		
 		$this->template->content = View::instance('v_index_proposal');
-		$this->template->title = "Project 3 Proposal";
+		$this->template->title = "Project 4 Proposal";
 		echo $this->template;
 	}
 	
