@@ -24,6 +24,7 @@
 # Routing
     Router::$routes = array(
     	'/' => '/index',     # default controller when "/" is requested
+    	'/proposal' => '/index/p4',
     );
     
 # Match requested uri to any routes and instantiate controller
