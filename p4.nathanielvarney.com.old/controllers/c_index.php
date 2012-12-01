@@ -7,7 +7,7 @@ class index_controller extends base_controller {
 	} 
 	
 	/*-------------------------------------------------------------------------------------------------
-	Access via http://yourapp.com/index/index/
+	Access via http://p3.nathanielvarney.com
 	-------------------------------------------------------------------------------------------------*/
 	public function index() {
 		
@@ -16,7 +16,7 @@ class index_controller extends base_controller {
 			$this->template->content = View::instance('v_index_index');
 			
 		# Now set the <title> tag
-			$this->template->title = "Hello World";
+			$this->template->title = "DWA: Project 3";
 	
 		# If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
 			$client_files = Array(
@@ -28,6 +28,20 @@ class index_controller extends base_controller {
 		# Render the view
 			echo $this->template;
 
+	}
+	
+	public function proposal() {
+		
+		$this->template->content = View::instance('v_index_proposal');
+		$this->template->title = "Project 3 Proposal";
+		echo $this->template;
+	}
+	
+	public function p4() {
+		
+		$this->template->content = View::instance('v_index_proposal_4');
+		$this->template->title = "Project 4 Proposal";
+		echo $this->template;
 	}
 	
 	
