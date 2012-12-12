@@ -7,7 +7,7 @@ class index_controller extends base_controller {
 	} 
 	
 	/*-------------------------------------------------------------------------------------------------
-	Access via http://p3.nathanielvarney.com
+	Access via http://yourapp.com/index/index/
 	-------------------------------------------------------------------------------------------------*/
 	public function index() {
 		
@@ -34,13 +34,6 @@ class index_controller extends base_controller {
 		
 		$this->template->content = View::instance('v_index_proposal');
 		$this->template->title = "Project 3 Proposal";
-		echo $this->template;
-	}
-	
-	public function p4() {
-		
-		$this->template->content = View::instance('v_index_proposal_4');
-		$this->template->title = "Project 4 Proposal";
 		echo $this->template;
 	}
 	
