@@ -1,0 +1,116 @@
+.post{
+	border: 2px solid black;
+	border-radius: 10px;
+	background: Black;
+	margin: 5px 25px 5px 25px;
+}
+
+.post_head{
+	font-size: 20px;
+	font-variant: small-caps;
+	color: Red;
+	margin: 5px 5px 5px 70px;
+}
+
+.post_body{
+	color: White;
+	margin: 5px 5px 5px 70px;
+}
+
+.user_thumb{
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	width: 60px;
+	max-height: 60px;
+	border-radius: 5px;
+}
+
+#footer {
+	clear:both;
+}
+
+#message {
+	margin: 2px 2px 2px 100px;
+	height: 22px;
+	color: Red;
+	font-size: 20px;
+}
+
+body {
+	background: DarkGrey;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 15px;
+	color: #000000;
+}
+
+a:link {
+	color: #DC143C; 
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #DC143C;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+/*Overrides anchor behavior for header*/
+.no-underline{
+	color: #FFFFFF !important;
+	text-decoration: none !important;
+}
+
+
+#logo {
+	color: White;
+	font-size: 50px;
+	background: DarkRed;
+	margin: 5px;
+	padding-bottom: 5px;
+}
+
+
+h2 {
+	color: DarkRed;
+	font-size: 30px;
+	font-variant: small-caps;
+	font-weight: bold;
+	margin-left: 15px
+}
+
+#menu {
+}	
+
+#menu_text{
+	color: #FFFFFF;
+	font-size: 15 px;
+	font-variant: small-caps;
+	font-weight: bold;
+	text-align: center;
+}
+
+#about_me {
+
+}
+
+#projet_info {
+
+}
+
+#project_info td {
+	text-align: left;
+	border: 1px solid #000000;
+	padding: 3px 7px 2px 7px;
+}
+
+#project_info tr.alt td {
+	color: #000000;
+	background-color: #FFFFF0;
+}
