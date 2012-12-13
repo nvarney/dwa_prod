@@ -1,0 +1,123 @@
+2012-12-12 18:41:55 - INFO --> Controller/Method: index/mail 
+2012-12-12 18:41:55 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY admin@p4.nathanielvarney.com 
+2012-12-12 18:41:55 - INFO --> From: DWA: Project 4 (admin@p4.nathanielvarney.com) 
+2012-12-12 18:41:55 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 18:41:55 - INFO --> CC:  
+2012-12-12 18:41:55 - INFO --> BCC:  
+2012-12-12 18:41:55 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 18:41:55 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 18:45:09 - INFO --> Controller/Method: index/mail 
+2012-12-12 18:45:09 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY admin@p4.nathanielvarney.com 
+2012-12-12 18:45:09 - INFO --> From: DWA: Project 4 (admin@p4.nathanielvarney.com) 
+2012-12-12 18:45:09 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 18:45:09 - INFO --> CC:  
+2012-12-12 18:45:09 - INFO --> BCC:  
+2012-12-12 18:45:09 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 18:45:09 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 18:45:12 - INFO --> FAILED TO SEND EMAIL 
+2012-12-12 18:53:36 - INFO --> Controller/Method: index/mail 
+2012-12-12 18:53:36 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY admin@p4.nathanielvarney.com 
+2012-12-12 18:53:36 - INFO --> From: DWA: Project 4 (admin@p4.nathanielvarney.com) 
+2012-12-12 18:53:36 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 18:53:36 - INFO --> CC:  
+2012-12-12 18:53:36 - INFO --> BCC:  
+2012-12-12 18:53:36 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 18:53:36 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 18:53:39 - INFO --> FAILED TO SEND EMAIL 
+2012-12-12 18:54:24 - INFO --> Controller/Method: index/mail 
+2012-12-12 18:54:24 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY admin@p4.nathanielvarney.com 
+2012-12-12 18:54:24 - INFO --> From: DWA: Project 4 (admin@p4.nathanielvarney.com) 
+2012-12-12 18:54:24 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 18:54:24 - INFO --> CC:  
+2012-12-12 18:54:24 - INFO --> BCC:  
+2012-12-12 18:54:24 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 18:54:24 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 18:54:26 - INFO --> FAILED TO SEND EMAIL 
+2012-12-12 18:55:41 - INFO --> Controller/Method: index/mail 
+2012-12-12 18:55:41 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY admin@p4.nathanielvarney.com 
+2012-12-12 18:55:41 - INFO --> From: DWA: Project 4 (admin@p4.nathanielvarney.com) 
+2012-12-12 18:55:41 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 18:55:41 - INFO --> CC:  
+2012-12-12 18:55:41 - INFO --> BCC:  
+2012-12-12 18:55:41 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 18:55:41 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 18:55:45 - INFO --> Controller/Method: index/mail 
+2012-12-12 18:55:45 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY admin@p4.nathanielvarney.com 
+2012-12-12 18:55:45 - INFO --> From: DWA: Project 4 (admin@p4.nathanielvarney.com) 
+2012-12-12 18:55:45 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 18:55:45 - INFO --> CC:  
+2012-12-12 18:55:45 - INFO --> BCC:  
+2012-12-12 18:55:45 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 18:55:45 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 18:58:19 - INFO --> Controller/Method: index/mail 
+2012-12-12 18:58:19 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY admin@p4.nathanielvarney.com 
+2012-12-12 18:58:19 - INFO --> From: DWA: Project 4 (admin@p4.nathanielvarney.com) 
+2012-12-12 18:58:19 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 18:58:19 - INFO --> CC:  
+2012-12-12 18:58:19 - INFO --> BCC:  
+2012-12-12 18:58:19 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 18:58:19 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 18:58:19 - INFO --> FAILED TO SEND EMAIL 
+2012-12-12 18:58:23 - INFO --> Controller/Method: index/mail 
+2012-12-12 18:58:23 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY admin@p4.nathanielvarney.com 
+2012-12-12 18:58:23 - INFO --> From: DWA: Project 4 (admin@p4.nathanielvarney.com) 
+2012-12-12 18:58:23 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 18:58:23 - INFO --> CC:  
+2012-12-12 18:58:23 - INFO --> BCC:  
+2012-12-12 18:58:23 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 18:58:23 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 18:58:23 - INFO --> FAILED TO SEND EMAIL 
+2012-12-12 18:58:53 - INFO --> Controller/Method: index/mail 
+2012-12-12 18:58:53 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@p4.nathanielvarney.com 
+2012-12-12 18:58:53 - INFO --> From: DWA: Project 4 (p4admin@p4.nathanielvarney.com) 
+2012-12-12 18:58:53 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 18:58:53 - INFO --> CC:  
+2012-12-12 18:58:53 - INFO --> BCC:  
+2012-12-12 18:58:53 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 18:58:53 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 18:58:53 - INFO --> FAILED TO SEND EMAIL 
+2012-12-12 19:04:34 - INFO --> Controller/Method: index/mail 
+2012-12-12 19:04:34 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY admin@p4.nathanielvarney.com 
+2012-12-12 19:04:34 - INFO --> From: DWA: Project 4 (admin@p4.nathanielvarney.com) 
+2012-12-12 19:04:34 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 19:04:34 - INFO --> CC:  
+2012-12-12 19:04:34 - INFO --> BCC:  
+2012-12-12 19:04:34 - INFO --> Subject: Welcome to JavaBeans 
+2012-12-12 19:04:34 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 19:06:39 - INFO --> Controller/Method: index/mail 
+2012-12-12 19:06:39 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY nathanielvarney.com@gmail.com 
+2012-12-12 19:06:39 - INFO --> From: DWA: Project 4 (nathanielvarney.com@gmail.com) 
+2012-12-12 19:06:39 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 19:06:39 - INFO --> CC:  
+2012-12-12 19:06:39 - INFO --> BCC:  
+2012-12-12 19:06:39 - INFO --> Subject: Test email 
+2012-12-12 19:06:39 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 19:12:14 - INFO --> Controller/Method: index/mail 
+2012-12-12 19:12:14 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY nathanielvarney.com@gmail.com 
+2012-12-12 19:12:14 - INFO --> From: DWA: Project 4 (nathanielvarney.com@gmail.com) 
+2012-12-12 19:12:14 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 19:12:14 - INFO --> CC:  
+2012-12-12 19:12:14 - INFO --> BCC:  
+2012-12-12 19:12:14 - INFO --> Subject: Test email2 
+2012-12-12 19:12:14 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 19:16:06 - INFO --> Controller/Method: index/mail 
+2012-12-12 19:16:06 - INFO --> From: DWA: Project 4 (nathanielvarney.com@gmail.com) 
+2012-12-12 19:16:06 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 19:16:06 - INFO --> CC:  
+2012-12-12 19:16:06 - INFO --> BCC:  
+2012-12-12 19:16:06 - INFO --> Subject: Test email2 
+2012-12-12 19:16:06 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 19:18:22 - INFO --> Controller/Method: index/mail 
+2012-12-12 19:18:22 - INFO --> From: DWA: Project 4 (p4admin@nathanielvarney.com) 
+2012-12-12 19:18:22 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 19:18:22 - INFO --> CC:  
+2012-12-12 19:18:22 - INFO --> BCC:  
+2012-12-12 19:18:22 - INFO --> Subject: Test email3 
+2012-12-12 19:18:22 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
+2012-12-12 19:18:59 - INFO --> Controller/Method: index/mail 
+2012-12-12 19:18:59 - INFO --> From: DWA: Project 4 (p4admin@nathanielvarney.com) 
+2012-12-12 19:18:59 - INFO --> To: Nathan (mrplasma@gmail.com),  
+2012-12-12 19:18:59 - INFO --> CC:  
+2012-12-12 19:18:59 - INFO --> BCC:  
+2012-12-12 19:18:59 - INFO --> Subject: Test email4 
+2012-12-12 19:18:59 - INFO --> Body: Hi Judy, this is just a message to confirm your re 
