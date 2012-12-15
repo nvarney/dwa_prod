@@ -1,0 +1,90 @@
+2012-12-15 17:43:41 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 17:43:41 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 17:43:41 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 17:43:41 - INFO --> To: ben (jamin),  
+2012-12-15 17:43:41 - INFO --> CC:  
+2012-12-15 17:43:41 - INFO --> BCC:  
+2012-12-15 17:43:41 - INFO --> Subject: virus 
+2012-12-15 17:43:41 - INFO --> Body: This is confirmation that your ticket as been subm 
+2012-12-15 17:47:37 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 17:47:37 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 17:47:37 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 17:47:37 - INFO --> To: mr (bean),  
+2012-12-15 17:47:37 - INFO --> CC:  
+2012-12-15 17:47:37 - INFO --> BCC:  
+2012-12-15 17:47:37 - INFO --> Subject: pc-setup 
+2012-12-15 17:47:37 - INFO --> Body: This is confirmation that your ticket as been subm 
+2012-12-15 17:50:31 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 17:50:31 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 17:50:31 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 17:50:31 - INFO --> To: test (test2),  
+2012-12-15 17:50:31 - INFO --> CC:  
+2012-12-15 17:50:31 - INFO --> BCC:  
+2012-12-15 17:50:31 - INFO --> Subject: pc-setup 
+2012-12-15 17:50:31 - INFO --> Body: This is confirmation that your ticket as been subm 
+2012-12-15 18:03:02 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 18:03:02 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 18:03:02 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 18:03:02 - INFO --> To: a (a),  
+2012-12-15 18:03:02 - INFO --> CC:  
+2012-12-15 18:03:02 - INFO --> BCC:  
+2012-12-15 18:03:02 - INFO --> Subject: virus 
+2012-12-15 18:03:02 - INFO --> Body: This is confirmation that your ticket as been subm 
+2012-12-15 18:05:04 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 18:05:04 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 18:05:04 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 18:05:04 - INFO --> To: b (b),  
+2012-12-15 18:05:04 - INFO --> CC:  
+2012-12-15 18:05:04 - INFO --> BCC:  
+2012-12-15 18:05:04 - INFO --> Subject: virus 
+2012-12-15 18:05:04 - INFO --> Body: This is confirmation that your ticket as been subm 
+2012-12-15 18:06:12 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 18:06:12 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 18:06:12 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 18:06:12 - INFO --> To: c (c),  
+2012-12-15 18:06:12 - INFO --> CC:  
+2012-12-15 18:06:12 - INFO --> BCC:  
+2012-12-15 18:06:12 - INFO --> Subject: other-issue 
+2012-12-15 18:06:12 - INFO --> Body: This is confirmation that your ticket as been subm 
+2012-12-15 18:13:28 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 18:13:28 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 18:13:28 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 18:13:28 - INFO --> To: e (e),  
+2012-12-15 18:13:28 - INFO --> CC:  
+2012-12-15 18:13:28 - INFO --> BCC:  
+2012-12-15 18:13:28 - INFO --> Subject: pc-setup 
+2012-12-15 18:13:28 - INFO --> Body: 6 
+2012-12-15 18:15:38 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 18:15:38 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 18:15:38 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 18:15:38 - INFO --> To: f (f),  
+2012-12-15 18:15:38 - INFO --> CC:  
+2012-12-15 18:15:38 - INFO --> BCC:  
+2012-12-15 18:15:38 - INFO --> Subject: other-issue 
+2012-12-15 18:15:38 - INFO --> Body: 6 
+2012-12-15 18:16:51 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 18:16:51 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 18:16:51 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 18:16:51 - INFO --> To: f (f),  
+2012-12-15 18:16:51 - INFO --> CC:  
+2012-12-15 18:16:51 - INFO --> BCC:  
+2012-12-15 18:16:51 - INFO --> Subject: other-issue 
+2012-12-15 18:16:51 - INFO --> Body: 0 
+2012-12-15 18:16:51 - INFO --> FAILED TO SEND EMAIL 
+2012-12-15 18:18:39 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 18:18:39 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 18:18:39 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 18:18:39 - INFO --> To: a (b),  
+2012-12-15 18:18:39 - INFO --> CC:  
+2012-12-15 18:18:39 - INFO --> BCC:  
+2012-12-15 18:18:39 - INFO --> Subject: virus 
+2012-12-15 18:18:39 - INFO --> Body: 0 
+2012-12-15 18:18:39 - INFO --> FAILED TO SEND EMAIL 
+2012-12-15 18:19:34 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 18:19:34 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 18:19:34 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 18:19:34 - INFO --> To: test (1),  
+2012-12-15 18:19:34 - INFO --> CC:  
+2012-12-15 18:19:34 - INFO --> BCC:  
+2012-12-15 18:19:34 - INFO --> Subject: virus 
+2012-12-15 18:19:34 - INFO --> Body: This is confirmation that you have delivered your  

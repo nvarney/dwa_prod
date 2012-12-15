@@ -1,6 +1,8 @@
 <div data-role="content">
 		<div class="content-primary">
 
+	<button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme a" data-icon="arrow-r" data-iconpos="right">Theme a</button>
+
 		<form action="#" method="get">
 
 			<h2>Form elements</h2>

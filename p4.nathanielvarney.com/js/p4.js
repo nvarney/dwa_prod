@@ -3,9 +3,11 @@ $(document).ready(function() {
 		type: 'POST',
 		url: '/tickets/p_ticket/',
 		beforeSubmit: function() {
-			$('#results').html("Adding...");
+			//$('#results').html("Adding...");
+			$.mobile.loading('show', { theme: "b", text: "Processing...", textVisible: true });
 		},
-		success: function(response) { 	
+		success: function(response) {
+			$.mobile.loading('hide');	
 			$('#results').html("Your post was added.");
 		} 
 	}; 

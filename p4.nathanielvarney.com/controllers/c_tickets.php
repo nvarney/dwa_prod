@@ -56,6 +56,37 @@ class tickets_controller extends base_controller {
 		# Insert
 		DB::instance(DB_NAME)->insert('tickets', $ticket);
 		DB::instance(DB_NAME)->insert('computers', $computer);
+
+		# Build a multi-dimension array of recipients of this email
+		$to[] = Array("name" => $_POST["name"], "email" => $_POST["email"]);
+		
+		# Build a single-dimension array of who this email is coming from
+		# note it's using the constants we set in the configuration above)
+		$from = Array("name" => "HSPH Helpdesk", "email" => APP_EMAIL);
+		
+		# Subject
+		$subject = $_POST["subject"];
+		
+		# Generate Time
+		
+		# You can set the body as just a string of text
+		$body = "This is confirmation that you have delivered your computer to the helpdesk";
+		
+		# OR, if your email is complex and involves HTML/CSS, you can build the body via a View just like we do in our controllers
+		# $body = View::instance('e_users_welcome');
+		
+		# Build multi-dimension arrays of name / email pairs for cc / bcc if you want to 
+		$cc  = "";
+		$bcc = "";
+		
+		# With everything set, send the email
+		
+		if(!$email = Email::send($to, $from, $subject, $body, true, $cc, $bcc)) {
+  			echo "Mailer Error: " . $mail->ErrorInfo;
+		} else {
+  			echo "Message sent!";
+		}
+	
 	}
 		
 } // end class
