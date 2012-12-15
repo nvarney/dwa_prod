@@ -1,7 +1,7 @@
 <div data-role="content">
 		<div class="content-primary">
 
-		<form name="new-ticket" method='POST' action='/tickets/p_ticket' data-ajax="false">
+		<form name="new-ticket" method="POST" action="/tickets/p_ticket" data-ajax="false">
 
 			<h2>Form elements</h2>
 
@@ -70,9 +70,11 @@
 	         <textarea name="notes" id="notes" class="general_input" value=""></textarea>
 			</div>
 			
-			<input type='submit'>
+			<button type="submit" data-theme="b">Submit</button>
 						
 		</form>
 		</div>
 		<div id="results"></div>
+		<br>
+		<br>
 </div>

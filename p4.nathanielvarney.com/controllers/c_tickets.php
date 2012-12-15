@@ -38,22 +38,24 @@ class tickets_controller extends base_controller {
 		$_POST['ticket_id'] = date('Ymd\-his');
 		$_POST['created']  = Time::now();
 		$_POST['modified'] = Time::now();
+		
+		# Add the location
 		$_POST['location'] = 'Helpdesk';
-		$_POST['status'] = 'New';
 		
 		# Create ticket and computer arrays
 		$ticket = $_POST;
 		$computer = $_POST;
 		
-		# Remove the unneeded data
+		# Add ticket status
+		$ticket['status'] = 'New';
+		
+		# Remove the unneeded data before submit
 		unset($ticket['model'], $ticket['serial']);
-		
-		
+		unset($computer['email'], $computer['phone'], $computer['notes']);
 		
 		# Insert
 		DB::instance(DB_NAME)->insert('tickets', $ticket);
-		echo var_dump($_POST);
-		echo var_dump($ticket);
+		DB::instance(DB_NAME)->insert('computers', $computer);
 	}
 		
 } // end class

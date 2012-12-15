@@ -17,6 +17,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script src="http://malsup.github.com/jquery.form.js"></script>
 	<script type="text/javascript" src="/js/p4.js"></script>
 				
 	<!-- Controller Specific JS/CSS -->
