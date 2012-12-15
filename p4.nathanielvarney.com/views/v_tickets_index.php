@@ -1,7 +1,7 @@
 <div data-role="content">
 		<div class="content-primary">
 
-		<form method='POST' action='/tickets/p_ticket'>
+		<form name="new-ticket" method='POST' action='/tickets/p_ticket' data-ajax="false">
 
 			<h2>Form elements</h2>
 
@@ -13,26 +13,21 @@
 			    <fieldset data-role="controlgroup" data-type="horizontal" data-theme="a">
 			     	<legend>Ticket Type:</legend>
 			         	<label for="setup">PC Setup</label>
-			         	<input type="radio" name="ticket-type" id="setup" value="pc-setup" checked="checked" />
+			         	<input type="radio" name="subject" id="setup" value="pc-setup" checked="checked" />
 			         	<label for="virus">Virus Removal</label>
-			         	<input type="radio" name="ticket-type" id="virus" value="virus" />
+			         	<input type="radio" name="subject" id="virus" value="virus" />
 			         	<label for="other-issue">Other Issue</label>
-			         	<input type="radio" name="ticket-type" id="other-issue" value="other-issue" />
+			         	<input type="radio" name="subject" id="other-issue" value="other-issue" />
 			    </fieldset>
 			</div>
 
 			<div data-role="fieldcontain">
-	         <label for="first_name">First Name:</label>
-	         <input type="text" name="first_name" id="first_name" class="general_input" value=""  />
+	         <label for="name">Name:</label>
+	         <input type="text" name="name" id="name" class="general_input" value=""  />
 			</div>
 			
 			<div data-role="fieldcontain">
-	         <label for="last_name">Last Name:</label>
-	         <input type="text" name="last_name" id="last_name" class="general_input" value=""  />
-			</div>
-			
-			<div data-role="fieldcontain">
-	         <label for="first_name">Email Address:</label>
+	         <label for="email">Email Address:</label>
 	         <input type="text" name="email" id="email" class="general_input" value=""  />
 			</div>
 			
@@ -74,7 +69,10 @@
 	         <label for="notes">Notes:</label>
 	         <textarea name="notes" id="notes" class="general_input" value=""></textarea>
 			</div>
+			
+			<input type='submit'>
 						
 		</form>
 		</div>
+		<div id="results"></div>
 </div>

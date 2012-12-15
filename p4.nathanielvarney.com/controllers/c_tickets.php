@@ -29,5 +29,31 @@ class tickets_controller extends base_controller {
 			echo $this->template;
 
 	}
+	
+	public function p_ticket() {
+		# Sanitize the user input
+		$_POST = DB::instance(DB_NAME)->sanitize($_POST);
+		
+		# Unix timestamp of when this post was created / modified
+		$_POST['ticket_id'] = date('Ymd\-his');
+		$_POST['created']  = Time::now();
+		$_POST['modified'] = Time::now();
+		$_POST['location'] = 'Helpdesk';
+		$_POST['status'] = 'New';
+		
+		# Create ticket and computer arrays
+		$ticket = $_POST;
+		$computer = $_POST;
+		
+		# Remove the unneeded data
+		unset($ticket['model'], $ticket['serial']);
+		
+		
+		
+		# Insert
+		DB::instance(DB_NAME)->insert('tickets', $ticket);
+		echo var_dump($_POST);
+		echo var_dump($ticket);
+	}
 		
 } // end class
