@@ -1,6 +1,6 @@
 <?php
 
-class ticket_controller extends base_controller {
+class tickets_controller extends base_controller {
 
 	public function __construct() {
 		parent::__construct();
@@ -13,7 +13,7 @@ class ticket_controller extends base_controller {
 		
 		# Any method that loads a view will commonly start with this
 		# First, set the content of the template with a view file
-			$this->template->content = View::instance('v_ticket_index');
+			$this->template->content = View::instance('v_tickets_index');
 			
 		# Now set the <title> tag
 			$this->template->title = "New Ticket";
