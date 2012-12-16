@@ -1,27 +1,28 @@
 <div data-role="content">
 	<div class="content-primary">	
 		<div>
-		<ul> <!--data-role="listview" data-filter="true">-->
+		<ul class="ui-body ui-body-a" data-type="horizontal"><!--data-role="listview" data-filter="true">-->
 			<? foreach($active as $active): ?>
-				<li>
-						<div class="ui-grid-d" data-type="horizontal" >
-			<div data-role="button" data-inline="true"><?=$active['name']?></div>
-			<div data-role="button" data-inline="true"><?=$active['model']?> <?=$active['serial']?></div>
-			<div data-role="button" data-inline="true"><?=$active['ticket_id']?></div>
-			<div data-role="button" data-inline="true"><? echo date("F j, Y", $active['created']); ?></div>
-			<div data-role="button" data-inline="true" data-icon="delete" data-iconpos="right"><?=$active['location']?></div>
+		<!--		
+						<div class="ui-body ui-body-a ui-grid-d" data-type="horizontal" >
+			<div class="ui-block-a" data-role="button" data-inline="true"><?=$active['name']?></div>
+			<div class="ui-block-b" data-role="button" data-inline="true"><?=$active['model']?> <?=$active['serial']?></div>
+			<div class="ui-block-c" data-role="button" data-inline="true"><?=$active['ticket_id']?></div>
+			<div class="ui-block-d" data-role="button" data-inline="true"><? echo date("F j, Y", $active['created']); ?></div>
+			<div class="ui-block-e" data-role="button" data-inline="true" data-icon="delete" data-iconpos="right"><?=$active['location']?></div>
 		</div>
-					
-						<!--<?=$active['name']?> 
+		-->		
+			<li>	
+						<?=$active['name']?> 
 						<?=$active['model']?> 
 						<?=$active['serial']?>
 						<?=$active['ticket_id']?>
 						<? echo date("F j, Y", $active['created']); ?>
-						<?=$active['location']?>-->
+						<?=$active['location']?>
 					
 				</li>
 			<? endforeach; ?>
-		</ul>
+			</ul>
 		</div>	
 	
 	
