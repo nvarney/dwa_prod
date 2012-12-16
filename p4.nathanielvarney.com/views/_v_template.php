@@ -25,9 +25,26 @@
 	
 </head>
 
-<body>	
-
-	<?=$content;?> 
-
+<body>
+	<div data-role="page">	
+		
+		<div data-role="header">
+			<div class="logo-container">
+				<a href="/" class="ui-link">
+					<div class="header-logo"></div>
+				</a>
+			</div>
+			<a href="/" id="login-button" class="ui-btn-right" data-icon="gear" data-iconpos="notext" data-theme="c">Login</a>
+		</div>
+		
+		<div data-role="content">
+			<?=$content;?> 
+		</div>
+	
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div>
+	
+	</div>
 </body>
 </html>
