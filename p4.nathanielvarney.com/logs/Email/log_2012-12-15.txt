@@ -104,3 +104,11 @@
 2012-12-15 19:06:24 - INFO --> BCC:  
 2012-12-15 19:06:24 - INFO --> Subject: other-issue 
 2012-12-15 19:06:24 - INFO --> Body: This is confirmation that you have delivered your  
+2012-12-15 20:55:11 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 20:55:11 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 20:55:11 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 20:55:11 - INFO --> To: Rob Bistro (rob@hsph.havard.edu),  
+2012-12-15 20:55:11 - INFO --> CC:  
+2012-12-15 20:55:11 - INFO --> BCC:  
+2012-12-15 20:55:11 - INFO --> Subject: virus 
+2012-12-15 20:55:11 - INFO --> Body: This is confirmation that you have delivered your  
