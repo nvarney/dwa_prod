@@ -88,3 +88,19 @@
 2012-12-15 18:19:34 - INFO --> BCC:  
 2012-12-15 18:19:34 - INFO --> Subject: virus 
 2012-12-15 18:19:34 - INFO --> Body: This is confirmation that you have delivered your  
+2012-12-15 18:51:37 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 18:51:37 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 18:51:37 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 18:51:37 - INFO --> To: Monika Morris (mmoris@hsph.harvard.edu),  
+2012-12-15 18:51:37 - INFO --> CC:  
+2012-12-15 18:51:37 - INFO --> BCC:  
+2012-12-15 18:51:37 - INFO --> Subject: pc-setup 
+2012-12-15 18:51:37 - INFO --> Body: This is confirmation that you have delivered your  
+2012-12-15 19:06:24 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-15 19:06:24 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-15 19:06:24 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-15 19:06:24 - INFO --> To: Steve Robins (srobins@hsph.harvard.edu),  
+2012-12-15 19:06:24 - INFO --> CC:  
+2012-12-15 19:06:24 - INFO --> BCC:  
+2012-12-15 19:06:24 - INFO --> Subject: other-issue 
+2012-12-15 19:06:24 - INFO --> Body: This is confirmation that you have delivered your  

@@ -25,6 +25,18 @@ class inventory_controller extends base_controller {
 	    
 	    	$this->template->client_files = Utils::load_client_files($client_files);   
 	      		
+	  	# Build a query of the computers
+		$q1 = "SELECT * FROM computers WHERE location = 'Helpdesk'";
+		$q2 = "SELECT * FROM computers WHERE location = 'Returned'";		
+	      		
+	    $active = DB::instance(DB_NAME)->select_rows($q1);
+	    $returned = DB::instance(DB_NAME)->select_rows($q2);
+			
+		# Pass data to the view
+			$this->template->content->active = $active;
+			$this->template->content->returned = $returned;
+			
+	      		
 		# Render the view
 			echo $this->template;
 
