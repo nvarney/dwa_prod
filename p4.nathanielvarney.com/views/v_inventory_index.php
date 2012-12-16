@@ -1,89 +1,56 @@
-<div data-role="content">
-	<div class="content-primary">	
-		<div>
-		<ul class="ui-body ui-body-a" data-type="horizontal"><!--data-role="listview" data-filter="true">-->
-			<? foreach($active as $active): ?>
-		<!--		
-						<div class="ui-body ui-body-a ui-grid-d" data-type="horizontal" >
-			<div class="ui-block-a" data-role="button" data-inline="true"><?=$active['name']?></div>
-			<div class="ui-block-b" data-role="button" data-inline="true"><?=$active['model']?> <?=$active['serial']?></div>
-			<div class="ui-block-c" data-role="button" data-inline="true"><?=$active['ticket_id']?></div>
-			<div class="ui-block-d" data-role="button" data-inline="true"><? echo date("F j, Y", $active['created']); ?></div>
-			<div class="ui-block-e" data-role="button" data-inline="true" data-icon="delete" data-iconpos="right"><?=$active['location']?></div>
-		</div>
-		-->		
-			<li>	
-						<?=$active['name']?> 
-						<?=$active['model']?> 
-						<?=$active['serial']?>
-						<?=$active['ticket_id']?>
-						<? echo date("F j, Y", $active['created']); ?>
-						<?=$active['location']?>
-					
-				</li>
-			<? endforeach; ?>
-			</ul>
-		</div>	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<!--	<ul data-role="listview" data-content="filter">
-			<li class="ui-btn-active">
-				<div class="ui-grid-d">
-					<div class="ui-block-a">Name</div>
-					<div class="ui-block-b">Model & Serial</div>
-					<div class="ui-block-c">Ticket #</div>
-					<div class="ui-block-d">Modified</div>
-					<div class="ui-block-e">Location</div>
-				</div>
-			</li>
-			<? foreach($active as $active): ?>
-				<li>
-				<div class="ui-grid-d">
-					<div class="ui-block-a"><?=$active['name']?></div>
-					<div class="ui-block-b"><?=$active['model']?> <?=$active['serial']?></div>
-					<div class="ui-block-c"><?=$active['ticket_id']?></div>
-					<div class="ui-block-d"><? echo date("F j, Y", $active['created']); ?></div>
-					<div class="ui-block-e">
-						<?=$active['location']?>
-						<button data-icon="delete" data-iconpos="right" data-mini="true" data-inline="true">Return</button>
-					</div>
-				</div>
-				</li>
-			<? endforeach; ?>
-		</ul>
-	</div>
+<div data-role="content" data-theme="b">
+	<h2>Active Computers</h2>
+		<p>These are the computers currently at the helpdesk</p>
+            <table data-role="table" id="active-computers" data-mode="reflow" class="table-stroke ui-body-a">
+              <thead>
+                <tr>
+                  <th data-priority="1">Ticket Number</th>
+                  <th data-priority="2">Name</th>
+                  <th data-priority="2">Model</th>
+                  <th data-priority="3">Serial #</th>
+                  <th data-priority="4">Date Changed</th>
+                  <th data-priority="4">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+            	<? foreach($active as $active): ?>
+                <tr>
+                  <th><?=$active['ticket_id']?></th>
+                  <td class="title"><?=$active['name']?></td>
+                  <td><?=$active['model']?></td>
+                  <td><?=$active['serial']?></td>
+                  <td><? echo date("F j, Y", $active['modified']); ?></td>
+                  <td><?=$active['location']?><button data-icon="delete" data-iconpos="right" data-mini="true" data-inline="true">Return</button></td>
+                </tr>
+            	<? endforeach; ?>
+         	</tbody>
+   	 </table> 
+
+
+	<h2>Returned Computers</h2>
+		<p>These are the computers have recently been returned to customers</p>
+            <table data-role="table" id="returned-computers" data-mode="reflow" class="table-stroke ui-body-a">
+              <thead>
+                <tr>
+                  <th data-priority="1">Ticket Number</th>
+                  <th data-priority="2">Name</th>
+                  <th data-priority="2">Model</th>
+                  <th data-priority="3">Serial #</th>
+                  <th data-priority="4">Date Changed</th>
+                  <th data-priority="4">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+            	<? foreach($returned as $returned): ?>
+                <tr>
+                  <th><?=$returned['ticket_id']?></th>
+                  <td class="title"><?=$returned['name']?></td>
+                  <td><?=$returned['model']?></td>
+                  <td><?=$returned['serial']?></td>
+                  <td><? echo date("F j, Y", $returned['modified']); ?></td>
+                  <td><?=$returned['location']?></td>
+                </tr>
+            	<? endforeach; ?>
+         	</tbody>
+   	 </table> 
 </div>
-<? foreach($active as $active): ?>
-		<div data-role="controlgroup" data-type="horizontal" >
-			<div data-role="button"><?=$active['name']?></div>
-			<div data-role="button"><?=$active['model']?> <?=$active['serial']?></div>
-			<div data-role="button"><?=$active['ticket_id']?></div>
-			<div data-role="button"><? echo date("F j, Y", $active['created']); ?></div>
-			<div data-role="button" data-icon="delete" data-iconpos="right"><?=$active['location']?></div>
-		</div>
-<? endforeach; ?>
--->
-
-
-<? foreach($returned as $returned): ?>
-	
-	<div class="returned">
-		
-		<div class="returned_head">
-			<?=$returned['location']?> <?=$returned['name']?> <?=$returned['model']?> <?=$returned['serial']?> on <? echo date("F j, Y", $returned['created']); ?>:
-		</div>
-		
-		<div id="footer"></div>
-		
-	</div>
-
-<? endforeach; ?>

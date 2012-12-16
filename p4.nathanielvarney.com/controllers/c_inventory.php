@@ -41,5 +41,21 @@ class inventory_controller extends base_controller {
 			echo $this->template;
 
 	}
+	
+		public function remove($serial_number) {
+		# Prepare our data array to be inserted
+		$data = Array(
+			"modified" => Time::now(),
+			"user_id" => $this->user->user_id,
+			"user_id_followed" => $user_id_followed
+			);
+		
+		# Do the insert
+		DB::instance(DB_NAME)->insert('users_users', $data);
+	
+		# Send them back
+		Router::redirect("/posts/users");
+	
+	}
 		
 } // end class
