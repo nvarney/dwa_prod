@@ -20,7 +20,7 @@ class tickets_controller extends base_controller {
 	
 		# If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
 			$client_files = Array(
-						""
+						"/js/p4_tickets.js"
 	                    );
 	    
 	    	$this->template->client_files = Utils::load_client_files($client_files);   
@@ -84,7 +84,10 @@ class tickets_controller extends base_controller {
 		if(!$email = Email::send($to, $from, $subject, $body, true, $cc, $bcc)) {
   			echo "Mailer Error: " . $mail->ErrorInfo;
 		} else {
-  			echo "Message sent!";
+  			# First, set the content of the template with a view file
+			$this->template->content = View::instance('v_ticket_success');
+			$this->template->title = "Success!";
+			echo $this->template;
 		}
 	
 	}

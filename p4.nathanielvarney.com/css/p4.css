@@ -20,3 +20,13 @@ width: 300px;
 height: 26px;
 background: url(/images/hsph-logo-small.png);
 }
+.header-btn {
+	-moz-border-radius: 1em /*{global-radii-blocks}*/;
+	-webkit-border-radius: 1em /*{global-radii-blocks}*/;
+	border-radius: 1em /*{global-radii-blocks}*/;
+}
+
+.footer-text {
+text-align: center;
+font-size: 10px;
+}

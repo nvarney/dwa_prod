@@ -1,44 +1,46 @@
-<div data-role="content">
-		<div class="content-primary">
+<div id="page-description" class="ui-body ui-body-c">
+	<h2>IT Computer Drop-Off Form</h2>
+	<p>With this form, you can submit a ticket for your new computer setup, computer re-image, virus removal, or other general issue. 
+	Just fill out the requested information, submit the form, and hand your laptop to a Helpdesk assistant. 
+	Let us know if you have any questions.  <p>
+	<p>-The Helpdesk</p>
+</div>
 
-		<form name="new-ticket" method="POST" action="/tickets/p_ticket" data-ajax="false">
 
-			<h2>Form elements</h2>
-
-			<p>This page contains various progressive-enhancement driven form controls. Native elements are sometimes hidden from view, but their values are maintained so the form can be submitted normally. Browsers that don't support the custom controls will still deliver a usable experience because all are based on native form elements.</p>
-			
-			<p>There is a complete set of <a href="forms-all-mini.html">mini-sized</a> form elements which are useful for toolbars or tighter spaces. <a href="forms-all-compare.html">Compare mini and normal</a> form elements side-by-side.</p>
-
+		<form name="new-ticket" method="POST" action="/tickets/p_ticket" data-ajax="true"">
 			<div data-role="fieldcontain">
-			    <fieldset data-role="controlgroup" data-type="horizontal" data-theme="a">
+			    <fieldset data-role="controlgroup">
 			     	<legend>Ticket Type:</legend>
 			         	<label for="setup">PC Setup</label>
-			         	<input type="radio" name="subject" id="setup" value="pc-setup" checked="checked" />
+			         	<input type="radio" name="subject" id="setup" value="New PC Setup" checked="checked" />
+			         	<label for="re-image">Computer Re-image</label>
+			         	<input type="radio" name="subject" id="re-image" value="Computer Re-Image" />
 			         	<label for="virus">Virus Removal</label>
-			         	<input type="radio" name="subject" id="virus" value="virus" />
+			         	<input type="radio" name="subject" id="virus" value="Virus Removal" />
 			         	<label for="other-issue">Other Issue</label>
-			         	<input type="radio" name="subject" id="other-issue" value="other-issue" />
+			         	<input type="radio" name="subject" id="other-issue" />
+			         	<input type="text" name="subject" id="other-issue-text" placeholder="Please explain">	
 			    </fieldset>
 			</div>
 
 			<div data-role="fieldcontain">
 	         <label for="name">Name:</label>
-	         <input type="text" name="name" id="name" class="general_input" value=""  />
+	         <input type="text" name="name" id="name" class="general_input" placeholder="John Harvard" value=""  />
 			</div>
 			
 			<div data-role="fieldcontain">
 	         <label for="email">Email Address:</label>
-	         <input type="text" name="email" id="email" class="general_input" value=""  />
+	         <input type="text" name="email" id="email" class="general_input" placeholder="jharvard@hsph.harvard.edu" value=""  />
 			</div>
 			
 			<div data-role="fieldcontain">
 	         <label for="phone">Telephone:</label>
-	         <input type="text" name="phone" id="phone" class="general_input" value=""  />
+	         <input type="tel" name="phone" id="phone" class="general_input" placeholder="(617) 432-4357" value=""  />
 			</div>
 			
 			<div data-role="fieldcontain">
 				<label for="model" class="select">Computer Model:</label>
-				<select name="model" id="model" data-native-menu="false" data-theme="a">
+				<select name="model" id="model" data-native-menu="false" data-theme="c">
 					<option>Choose Computer Model</option>
 					<optgroup label="Dell">
 						<option value="dell-optiplex" selected>Optiplex</option>
@@ -62,19 +64,21 @@
 			
 			<div data-role="fieldcontain">
 	         <label for="serial">Computer Serial #:</label>
-	         <input type="text" name="serial" id="serial" class="general_input" value=""  />
+	         <input type="text" name="serial" id="serial" class="general_input" placeholder="L3AKV71" value=""  />
 			</div>
 			
 			<div data-role="fieldcontain">
 	         <label for="notes">Notes:</label>
-	         <textarea name="notes" id="notes" class="general_input" value=""></textarea>
+	         <textarea name="notes" id="notes" class="general_input" placeholder="Enter any special instructions or requests here" value=""></textarea>
 			</div>
 			
-			<button type="submit" data-theme="b">Submit</button>
-						
+			<div class="ui-body ui-body-c">
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-a"><a href="/tickets" data-role="button" data-theme="c" data-ajax="false">Cancel</a></div>
+					<div class="ui-block-b"><button type="submit" data-theme="b">Submit</button></div>
+	    		</fieldset>
+			</div>		
 		</form>
-		</div>
-		<div id="results"></div>
+		
 		<br>
 		<br>
-</div>

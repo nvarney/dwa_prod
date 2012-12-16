@@ -11,6 +11,15 @@ class inventory_controller extends base_controller {
 	-------------------------------------------------------------------------------------------------*/
 	public function index() {
 		
+		# If user is blank, they're not logged in, show message and don't do anything else
+		if(!$this->user) {
+			echo "Helpdesk staff only. <a href='/tickets'>Return to ticket submission</a>";
+			
+			# Return will force this method to exit here so the rest of 
+			# the code won't be executed and the profile view won't be displayed.
+			return false;
+		}
+		
 		# Any method that loads a view will commonly start with this
 		# First, set the content of the template with a view file
 			$this->template->content = View::instance('v_inventory_index');
@@ -20,7 +29,7 @@ class inventory_controller extends base_controller {
 	
 		# If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
 			$client_files = Array(
-						""
+						"/js/p4_inventory.js"
 	                    );
 	    
 	    	$this->template->client_files = Utils::load_client_files($client_files);   

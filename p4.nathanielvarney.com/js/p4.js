@@ -1,4 +1,5 @@
 $(document).ready(function() {	
+	/*
 	var options = { 
 		type: 'POST',
 		url: '/tickets/p_ticket/',
@@ -14,4 +15,5 @@ $(document).ready(function() {
 		
 	// Using the above options, Ajax'ify the form	
 	$('form[name=new-ticket]').ajaxForm(options);
+	*/
 });

@@ -62,6 +62,43 @@ class index_controller extends base_controller {
 	
 	}
 	
+	/*-------------------------------------------------------------------------------------------------
+	Using login code from p2. In real production, this would be linked in to LDAP, but for this project
+	I am just using a local database.
+	-------------------------------------------------------------------------------------------------*/
+	public function p_login() {
+		# Sanitize the user entered data to prevent any funny-business (re: SQL Injection Attacks)
+		$_POST = DB::instance(DB_NAME)->sanitize($_POST);
+		
+		# Hash submitted password so we can compare it against one in the db
+		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
+		
+		# Search the db for this email and password
+		# Retrieve the token if it's available
+		$q = "SELECT token 
+			FROM users 
+			WHERE email = '".$_POST['email']."' 
+			AND password = '".$_POST['password']."'";
+		
+		$token = DB::instance(DB_NAME)->select_field($q);	
+					
+		# If we didn't get a token back, login failed
+		if(!$token) {
+				
+			# Send them back to the home page
+			Router::redirect("/");
+			
+		# But if we did, login succeeded! 
+		} else {
+				
+			# Store this token in a cookie
+			setcookie("token", $token, strtotime('+2 weeks'), '/');
+			
+			# Send them to the main page - or wherever you want them to go
+			Router::redirect("/inventory");			
+		}
+	}
+	
 	
 	
 		
