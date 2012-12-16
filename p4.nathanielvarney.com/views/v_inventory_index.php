@@ -1,4 +1,4 @@
-<div data-role="content" data-theme="b">
+<div data-role="content" data-theme="b" data-ajax="false">
 	<h2>Active Computers</h2>
 		<p>These are the computers currently at the helpdesk</p>
             <table data-role="table" id="active-computers" data-mode="reflow" class="table-stroke ui-body-a">
@@ -20,7 +20,7 @@
                   <td><?=$active['model']?></td>
                   <td><?=$active['serial']?></td>
                   <td><? echo date("F j, Y", $active['modified']); ?></td>
-                  <td><?=$active['location']?><button data-icon="delete" data-iconpos="right" data-mini="true" data-inline="true">Return</button></td>
+                  <td><?=$active['location']?><a href='/inventory/return_pc/<?=$active['serial']?>'><button data-icon="delete" data-iconpos="right" data-mini="true" data-inline="true">Return</button></a></td>
                 </tr>
             	<? endforeach; ?>
          	</tbody>

@@ -42,19 +42,22 @@ class inventory_controller extends base_controller {
 
 	}
 	
-		public function remove($serial_number) {
+		public function return_pc($serial_number) {
 		# Prepare our data array to be inserted
 		$data = Array(
 			"modified" => Time::now(),
-			"user_id" => $this->user->user_id,
-			"user_id_followed" => $user_id_followed
+			"location" => "Returned",
 			);
 		
+		$where_condition="WHERE serial = \"".$serial_number."\"";
+		echo $where_condition;
+		
 		# Do the insert
-		DB::instance(DB_NAME)->insert('users_users', $data);
+		DB::instance(DB_NAME)->update('computers', $data, $where_condition);
 	
 		# Send them back
-		Router::redirect("/posts/users");
+		Router::redirect("/inventory");
+		
 	
 	}
 		
