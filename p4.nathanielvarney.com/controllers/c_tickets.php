@@ -34,6 +34,21 @@ class tickets_controller extends base_controller {
 		# Sanitize the user input
 		$_POST = DB::instance(DB_NAME)->sanitize($_POST);
 		
+		
+		# Backup validation in case of javascript failure
+		# Not recommended as the page looks terrible without js
+		# Check if data was entered
+		if (($_POST['name'] == "") || ($_POST['phone'] == "") || ($_POST['serial'] == "")){
+			# Send back to signup with appropriate error
+			Router::redirect("/tickets");		
+		}
+		
+		# Check if email address is of the right form
+		if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+			# Send back to signup with appropriate error
+			Router::redirect("/tickets");
+		}
+		
 		# Unix timestamp of when this post was created / modified
 		$_POST['ticket_id'] = date('Ymd\-his');
 		$_POST['created']  = Time::now();
