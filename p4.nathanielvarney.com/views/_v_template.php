@@ -28,7 +28,7 @@
 </head>
 
 <body>
-	<div data-role="page">	
+	<div id="page1" data-role="page">	
 		
 		<!-- Header containing home link, logo, and login link -->
 		<div data-role="header">
