@@ -10,13 +10,6 @@
 				</a><a href='/inventory/return_pc/<?=$active['serial']?>'>Return Computer</a>
 			</li>
 			<? endforeach; ?>
-			
-			<li><a href="#">
-				<img src="images/album-bb.jpg" />
-				<h3>Broken Bells</h3>
-				<p>Broken Bells</p>
-				</a><a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
-			</li>
 		</ul>	
 
 	<h2>Returned Computers</h2>
