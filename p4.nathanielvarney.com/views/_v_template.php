@@ -16,7 +16,8 @@
 	<!-- JS -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<!--<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>-->
 	<script src="http://malsup.github.com/jquery.form.js"></script>
 	<script type="text/javascript" src="/js/jquery.validate.js"></script>
 	<script type="text/javascript" src="/js/additional-methods.js"></script>
@@ -32,7 +33,7 @@
 		
 		<!-- Header containing home link, logo, and login link -->
 		<div data-role="header">
-			<a href="/tickets" data-role="button" class="ui-btn-left" data-icon="home" data-mini="true" data-iconpos="notext">Return to Ticket Form</a>
+			<a href="/" data-role="button" class="ui-btn-left" data-icon="home" data-mini="true" data-iconpos="notext">Return to Ticket Form</a>
 			<div class="logo-container">
 				<a href="http://www.hsph.harvard.edu/it" class="ui-link" rel="external">
 					<div class="header-logo"></div>

@@ -9,3 +9,7 @@ $(document).ready(function() {
 	$("#ticket-form").validate();
 
 });
+
+$('#page1').bind('pageinit', function(event) {
+	$("#ticket-form").validate();
+});
