@@ -35,8 +35,8 @@ class inventory_controller extends base_controller {
 	    	$this->template->client_files = Utils::load_client_files($client_files);   
 	      		
 	  	# Build a query of the computers
-		$q1 = "SELECT * FROM computers WHERE location = 'Helpdesk'";
-		$q2 = "SELECT * FROM computers WHERE location = 'Returned'";		
+		$q1 = "SELECT * FROM computers WHERE location = 'Helpdesk' ORDER BY computers.modified DESC";
+		$q2 = "SELECT * FROM computers WHERE location = 'Returned' ORDER BY computers.modified DESC";		
 	      		
 	    $active = DB::instance(DB_NAME)->select_rows($q1);
 	    $returned = DB::instance(DB_NAME)->select_rows($q2);
@@ -52,6 +52,7 @@ class inventory_controller extends base_controller {
 	}
 	
 		public function return_pc($serial_number) {
+
 		# Prepare our data array to be inserted
 		$data = Array(
 			"modified" => Time::now(),
@@ -59,13 +60,14 @@ class inventory_controller extends base_controller {
 			);
 		
 		$where_condition="WHERE serial = \"".$serial_number."\"";
-		echo $where_condition;
+		//echo $where_condition;
 		
 		# Do the insert
 		DB::instance(DB_NAME)->update('computers', $data, $where_condition);
 	
 		# Send them back
 		Router::redirect("/inventory");
+
 		
 	
 	}

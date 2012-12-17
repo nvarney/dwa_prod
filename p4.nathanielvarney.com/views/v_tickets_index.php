@@ -42,21 +42,29 @@
 			<select name="model" id="model" data-native-menu="false" data-theme="c">
 				<option>Choose Computer Model</option>
 				<optgroup label="Dell">
-					<option value="dell-optiplex" selected>Optiplex</option>
-					<option value="dell-latitude">Latitude</option>
-					<option value="dell-precision">Precision</option>
+					<option value="Dell Optiplex" selected>Optiplex</option>
+					<option value="Dell Latitude">Latitude</option>
+					<option value="Dell Precision">Precision</option>
 				</optgroup>
 				<optgroup label="Lenovo/IBM">
-					<option value="lenovo-thinkpad">ThinkPad</option>
-					<option value="lenovo-thinkstation">ThinkStation</option>
-					<option value="lenovo-thinkcentre">ThinkCentre</option>
+					<option value="Lenovo ThinkPad">ThinkPad</option>
+					<option value="Lenovo ThinkStation">ThinkStation</option>
+					<option value="Lenovo ThinkCentre">ThinkCentre</option>
 				</optgroup>
 				<optgroup label="Apple">
-					<option value="apple-macbookpro">MacBook Pro</option>
-					<option value="apple-macbookair">MacBook Air</option>
-					<option value="apple-imac">iMac</option>
-					<option value="apple-macmini">Mac Mini</option>
-					<option value="apple-macpro">Mac Pro</option>
+					<option value="Apple MacBook Pro">MacBook Pro</option>
+					<option value="Apple MacBook Air">MacBook Air</option>
+					<option value="Apple iMac">iMac</option>
+					<option value="Apple Mac Mini">Mac Mini</option>
+					<option value="Apple Mac Pro">Mac Pro</option>
+				</optgroup>
+				<optgroup label="Other">
+					<option value="Samsung">Samsung</option>
+					<option value="Toshiba">Toshiba</option>
+					<option value="HP">HP</option>
+					<option value="Acer">Acer</option>
+					<option value="Asus">Asus</option>
+					<option value="Other">Other Computer</option>
 				</optgroup>
 			</select>
 		</div>

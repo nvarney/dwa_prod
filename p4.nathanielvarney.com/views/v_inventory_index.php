@@ -1,56 +1,34 @@
 <div data-role="content" data-theme="b" data-ajax="false">
 	<h2>Active Computers</h2>
 		<p>These are the computers currently at the helpdesk</p>
-            <table data-role="table" id="active-computers" data-mode="reflow" class="table-stroke ui-body-a">
-              <thead>
-                <tr>
-                  <th data-priority="1">Ticket Number</th>
-                  <th data-priority="2">Name</th>
-                  <th data-priority="2">Model</th>
-                  <th data-priority="3">Serial #</th>
-                  <th data-priority="4">Date Changed</th>
-                  <th data-priority="4">Location</th>
-                </tr>
-              </thead>
-              <tbody>
-            	<? foreach($active as $active): ?>
-                <tr>
-                  <th><?=$active['ticket_id']?></th>
-                  <td class="title"><?=$active['name']?></td>
-                  <td><?=$active['model']?></td>
-                  <td><?=$active['serial']?></td>
-                  <td><? echo date("F j, Y", $active['modified']); ?></td>
-                  <td><?=$active['location']?><a href='/inventory/return_pc/<?=$active['serial']?>'><button data-icon="delete" data-iconpos="right" data-mini="true" data-inline="true">Return</button></a></td>
-                </tr>
-            	<? endforeach; ?>
-         	</tbody>
-   	 </table> 
-
+           <ul data-role="listview" data-filter="true" data-inset="true" data-split-icon="delete" data-theme="a" data-split-theme="b">
+			<? foreach($active as $active): ?>
+			<li><a href="#">
+				<h2><?=$active['name']?></h2>
+				<p><?=$active['model']?>  <?=$active['serial']?> </p>
+				<p><?=$active['ticket_id']?> <? echo date("F j, Y", $active['modified']); ?> </p>
+				</a><a href='/inventory/return_pc/<?=$active['serial']?>'>Return Computer</a>
+			</li>
+			<? endforeach; ?>
+			
+			<li><a href="#">
+				<img src="images/album-bb.jpg" />
+				<h3>Broken Bells</h3>
+				<p>Broken Bells</p>
+				</a><a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+			</li>
+		</ul>	
 
 	<h2>Returned Computers</h2>
 		<p>These are the computers have recently been returned to customers</p>
-            <table data-role="table" id="returned-computers" data-mode="reflow" class="table-stroke ui-body-a">
-              <thead>
-                <tr>
-                  <th data-priority="1">Ticket Number</th>
-                  <th data-priority="2">Name</th>
-                  <th data-priority="2">Model</th>
-                  <th data-priority="3">Serial #</th>
-                  <th data-priority="4">Date Changed</th>
-                  <th data-priority="4">Location</th>
-                </tr>
-              </thead>
-              <tbody>
-            	<? foreach($returned as $returned): ?>
-                <tr>
-                  <th><?=$returned['ticket_id']?></th>
-                  <td class="title"><?=$returned['name']?></td>
-                  <td><?=$returned['model']?></td>
-                  <td><?=$returned['serial']?></td>
-                  <td><? echo date("F j, Y", $returned['modified']); ?></td>
-                  <td><?=$returned['location']?></td>
-                </tr>
-            	<? endforeach; ?>
-         	</tbody>
-   	 </table> 
+            <ul data-role="listview" data-filter="true" data-inset="true" data-theme="a" data-split-theme="b">
+			<? foreach($returned as $returned): ?>
+			<li><div>
+				<h2><?=$returned['name']?></h2>
+				<p><?=$returned['model']?>  <?=$returned['serial']?> </p>
+				<p><?=$returned['ticket_id']?> <? echo date("F j, Y", $returned['modified']); ?> </p>
+				</div>
+			</li>
+			<? endforeach; ?>
+		</ul>
 </div>
