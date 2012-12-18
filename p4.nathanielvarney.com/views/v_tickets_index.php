@@ -8,7 +8,7 @@
 
 
 	<form name="new-ticket" id="ticket-form" method="POST" action="/tickets/p_ticket" data-ajax="true"">
-		<div data-role="fieldcontain">
+		<div data-role="fieldcontain" id="ticketType">
 			<fieldset data-role="controlgroup">
 				<legend>Ticket Type:</legend>
 					<label for="setup">PC Setup</label>
@@ -42,21 +42,21 @@
 			<select name="model" id="model" data-native-menu="false" data-theme="c">
 				<option>Choose Computer Model</option>
 				<optgroup label="Dell">
-					<option value="Dell Optiplex" selected>Optiplex</option>
-					<option value="Dell Latitude">Latitude</option>
-					<option value="Dell Precision">Precision</option>
+					<option class="dell" value="Dell Optiplex" selected>Optiplex</option>
+					<option class="dell" value="Dell Latitude">Latitude</option>
+					<option class="dell" value="Dell Precision">Precision</option>
 				</optgroup>
 				<optgroup label="Lenovo/IBM">
-					<option value="Lenovo ThinkPad">ThinkPad</option>
-					<option value="Lenovo ThinkStation">ThinkStation</option>
-					<option value="Lenovo ThinkCentre">ThinkCentre</option>
+					<option class="lenovo" value="Lenovo ThinkPad">ThinkPad</option>
+					<option class="lenovo" value="Lenovo ThinkStation">ThinkStation</option>
+					<option class="lenovo" value="Lenovo ThinkCentre">ThinkCentre</option>
 				</optgroup>
 				<optgroup label="Apple">
-					<option value="Apple MacBook Pro">MacBook Pro</option>
-					<option value="Apple MacBook Air">MacBook Air</option>
-					<option value="Apple iMac">iMac</option>
-					<option value="Apple Mac Mini">Mac Mini</option>
-					<option value="Apple Mac Pro">Mac Pro</option>
+					<option class="apple" value="Apple MacBook Pro">MacBook Pro</option>
+					<option class="apple" value="Apple MacBook Air">MacBook Air</option>
+					<option class="apple" value="Apple iMac">iMac</option>
+					<option class="apple" value="Apple Mac Mini">Mac Mini</option>
+					<option class="apple" value="Apple Mac Pro">Mac Pro</option>
 				</optgroup>
 				<optgroup label="Other">
 					<option value="Samsung">Samsung</option>
@@ -70,8 +70,15 @@
 		</div>
 		
 		<div data-role="fieldcontain">
-		 <label for="serial">Computer Serial #:</label>
-		 <input type="text" name="serial" id="serial" class="general_input required" size="25" minlength="8" placeholder="L3AKV71" value=""  />
+		 <label for="serial">Computer Serial #:<a href="#serialImage" data-rel="popup" id="model-pop-btn" data-position-to="window" data-role="button" data-inline="true" data-transition="fade" data-icon="info" data-mini="true" data-iconpos="notext">How do I find my serial number?</a></label>
+		 <input type="text" name="serial" id="serial" class="general_input required" size="25" minlength="6" placeholder="L3AKV71" value=""  />
+		</div>
+		
+		<div data-role="popup" id="serialImage" data-overlay-theme="a" data-theme="d" data-corners="false">
+			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<img id="dellSerial" class="serialPhoto" src="/images/dell-serial.jpeg" alt="Dell Serial Number">
+			<img id="lenovoSerial" class="serialPhoto" src="/images/lenovo-serial.jpeg" alt="Lenovo Serial Number">
+			<img id="appleSerial" class="serialPhoto" src="/images/apple-serial.png" alt="Apple Serial Number">
 		</div>
 		
 		<div data-role="fieldcontain">

@@ -31,6 +31,7 @@ class tickets_controller extends base_controller {
 	}
 	
 	public function p_ticket() {
+	
 		# Sanitize the user input
 		$_POST = DB::instance(DB_NAME)->sanitize($_POST);
 		
@@ -80,12 +81,21 @@ class tickets_controller extends base_controller {
 		$from = Array("name" => "HSPH Helpdesk", "email" => APP_EMAIL);
 		
 		# Subject
-		$subject = $_POST["subject"];
+		$subject = "Helpdesk Computer Drop Off: ".$_POST["subject"];
 		
 		# Generate Time
 		
 		# You can set the body as just a string of text
-		$body = "This is confirmation that you have delivered your computer to the helpdesk";
+		$body = "This is confirmation that you have delivered your "
+		. $_POST['model']. 
+		" with the serial number "
+		. $_POST['serial'].
+		" to the helpdesk at "
+		. date('g\:i a \o\n F d\, Y') . 
+		" with the following notes: <br>"
+		. $_POST['notes'] .
+		"<br><br>Thank you and have a great day!"
+		."<br>The Helpdesk<br>(617) 432-4357<br>helpdesk@hsph.harvard.edu";
 		
 		# OR, if your email is complex and involves HTML/CSS, you can build the body via a View just like we do in our controllers
 		# $body = View::instance('e_users_welcome');
@@ -104,7 +114,8 @@ class tickets_controller extends base_controller {
 			$this->template->title = "Success!";
 			echo $this->template;
 		}
-	
+		
+		
 	}
 		
 } // end class
