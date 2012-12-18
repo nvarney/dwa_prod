@@ -1,12 +1,16 @@
 $(document).ready(function() {	
 	
 	// This function activates the form validator after the page loads
+	//$('#ticket-form').live('click focus mouseover', function() {
+	//	$(this).validate();	
+	//});
+	
 	$('#ticket-form').live('click focus mouseover', function() {
-		$(this).validate();	
+		$('#ticket-form').validate();	
 	});
 	
 	// This function hides the appropriate images in the popup window bases on the chosen model number
-	$('#model-pop-btn').click(function() {
+	$('#model-pop-btn').live('click', function() {
 	if (($('#model').val()=="Dell Optiplex")||($('#model').val()=="Dell Latitude")||($('#model').val()=="Dell Precision")) {
 		$('#dellSerial').show();
 		$('#lenovoSerial').hide();
