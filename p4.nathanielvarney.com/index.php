@@ -24,6 +24,7 @@
 # Routing
     Router::$routes = array(
     	'/' => '/tickets',     # default controller when "/" is requested
+    	'/proposal' => '/index/p4'	#proposal site redirect
     );
     
 # Match requested uri to any routes and instantiate controller

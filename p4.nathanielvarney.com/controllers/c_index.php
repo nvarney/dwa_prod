@@ -67,6 +67,16 @@ class index_controller extends base_controller {
 		}
 	}
 	
+	/*-------------------------------------------------------------------------------------------------
+	Function to generate the proposal site
+	-------------------------------------------------------------------------------------------------*/
+	public function p4() {
+		
+		$this->template->content = View::instance('v_index_proposal_4');
+		$this->template->title = "Project 4 Proposal";
+		echo $this->template;
+	}
+	
 	
 	
 		
