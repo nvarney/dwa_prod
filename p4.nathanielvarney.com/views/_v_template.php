@@ -10,14 +10,17 @@
   
   	<!-- CSS -->
   	<link rel="stylesheet" href="/css/hsph.css" />
-  	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+  	<link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+  	<link rel="stylesheet" href="/css/jquery.mobile-1.2.0.min.css">
   	<link rel="stylesheet" href="/css/p4.css" />
 	
 	<!-- JS -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	<!--<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>-->
+	<!-- Does not seem to be a reliable code host
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	-->
 	<script src="http://malsup.github.com/jquery.form.js"></script>
 	<script type="text/javascript" src="/js/jquery.validate.js"></script>
 	<script type="text/javascript" src="/js/additional-methods.js"></script>
