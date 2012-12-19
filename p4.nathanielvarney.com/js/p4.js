@@ -6,7 +6,25 @@ $(document).ready(function() {
 	//});
 	
 	$('#ticket-form').live('click focus mouseover', function() {
-		$('#ticket-form').validate();	
+		$('#ticket-form').validate({
+			rules: {
+				name:{
+					minlength: 4,
+					maxlength: 40	
+				},
+				email:{
+					maxlength: 50	
+				},
+				phone:{
+					minlength: 5,
+					maxlength: 20	
+				},
+				serial:{
+					minlength: 6,
+					maxlength: 30	
+				}
+    		}
+		});	
 	});
 	
 	// This function hides the appropriate images in the popup window bases on the chosen model number

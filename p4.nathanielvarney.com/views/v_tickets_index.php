@@ -24,17 +24,17 @@
 	
 		<div data-role="fieldcontain">
 		 <label for="name">Name:</label>
-		 <input type="text" name="name" id="name" class="general_input required" size="25" minlength="4" placeholder="John Harvard" value=""  />
+		 <input type="text" name="name" id="name" class="general_input required" maxlength="41" placeholder="John Harvard" value=""  />
 		</div>
 		
 		<div data-role="fieldcontain">
 		 <label for="email">Email Address:</label>
-		 <input type="text" name="email" id="email" class="general_input required email" size="30" placeholder="jharvard@hsph.harvard.edu" value=""  />
+		 <input type="text" name="email" id="email" class="general_input required email" maxlength="51" placeholder="jharvard@hsph.harvard.edu" value=""  />
 		</div>
 		
 		<div data-role="fieldcontain">
 		 <label for="phone">Telephone:</label>
-		 <input type="tel" name="phone" id="phone" class="general_input required" size="20" minlength="5" placeholder="(617) 432-4357" value=""  />
+		 <input type="tel" name="phone" id="phone" class="general_input required" size="21" maxlength="21" placeholder="(617) 432-4357" value=""  />
 		</div>
 		
 		<div data-role="fieldcontain">
@@ -71,7 +71,7 @@
 		
 		<div data-role="fieldcontain">
 		 <label for="serial">Computer Serial #:<a href="#serialImage" data-rel="popup" id="model-pop-btn" data-position-to="window" data-role="button" data-inline="true" data-transition="fade" data-icon="info" data-mini="true" data-iconpos="notext">How do I find my serial number?</a></label>
-		 <input type="text" name="serial" id="serial" class="general_input required" size="25" minlength="6" placeholder="L3AKV71" value=""  />
+		 <input type="text" name="serial" id="serial" class="general_input required" size="31" maxlength="31" placeholder="L3AKV71" value=""  />
 		</div>
 		
 		<div data-role="popup" id="serialImage" data-overlay-theme="a" data-theme="d" data-corners="false">
