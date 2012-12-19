@@ -24,7 +24,7 @@
 	<script type="text/javascript" src="/js/p4.js"></script>
 				
 	<!-- Controller Specific JS/CSS -->
-	<?=@$client_files; ?>
+	<!-- <?=@$client_files; ?> Not used, generates a validation error -->
 	
 </head>
 
@@ -60,7 +60,7 @@
 			</form>
 			<!-- Link to access the signup page so the site can be tested -->
 			<div id="helpdeskSignup">
-				<a href="/users/signup" alt="Go to signup page">Create a Helpdesk Account</a>
+				<a href="/users/signup">Create a Helpdesk Account</a>
 			</div>
 		</div>
 		

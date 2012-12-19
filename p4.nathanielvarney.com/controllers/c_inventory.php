@@ -27,12 +27,12 @@ class inventory_controller extends base_controller {
 		# Now set the <title> tag
 			$this->template->title = "Computer Inventory";
 	
-		# If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
+		/* If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
 			$client_files = Array(
 						""
 	                    );
 	    
-	    	$this->template->client_files = Utils::load_client_files($client_files);   
+	    	$this->template->client_files = Utils::load_client_files($client_files);  */ 
 	      		
 	  	# Build a query of the computers
 		$q1 = "SELECT * FROM computers WHERE location = 'Helpdesk' ORDER BY computers.modified DESC";
