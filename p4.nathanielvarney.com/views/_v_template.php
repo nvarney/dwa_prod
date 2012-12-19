@@ -58,6 +58,10 @@
 		    	  <button type="submit" data-theme="b">Sign in</button>
 				</div>
 			</form>
+			<!-- Link to access the signup page so the site can be tested -->
+			<div id="helpdeskSignup">
+				<a href="/users/signup" alt="Go to signup page">Create a Helpdesk Account</a>
+			</div>
 		</div>
 		
 		<!-- Page content is inserted here -->

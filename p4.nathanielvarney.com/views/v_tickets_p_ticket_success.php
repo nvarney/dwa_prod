@@ -1,4 +1,4 @@
-<div id="success-message">
+<div class="success-message">
 	<h2>Your ticket has been successfully submitted!</h2>
 	<p>You should receive an email shortly to confirm your information. We will let you know as soon as your computer is ready.</p>
 </div>

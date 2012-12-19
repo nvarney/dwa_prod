@@ -45,6 +45,39 @@ $(document).ready(function() {
 
 		
 	});
-
-
+	
+	
+	//This function does validation of the user signup page
+	$('#user-signup').live('click focus mouseover', function() {
+		$('#user-signup').validate({
+			rules: {
+				first_name: {
+					required: true,
+					minlength: 2,
+					maxlength: 20
+				},
+				last_name:{
+					required: true,
+					minlength: 2,
+					maxlength: 20
+				}, 
+				password: { 
+					required: true, 
+					minlength: 5,
+					maxlength: 25
+				}, 
+				password_check: { 
+					required: true, 
+					minlength: 5, 
+					equalTo: "#user-password" 
+				}, 
+				email: { 
+					required: true, 
+					email: true,
+					maxlength: 50  
+				}
+    		}
+		});	
+	});
+	
 });
