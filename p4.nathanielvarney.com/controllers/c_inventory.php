@@ -51,7 +51,11 @@ class inventory_controller extends base_controller {
 
 	}
 	
-		public function return_pc($serial_number) {
+	/*-------------------------------------------------------------------------------------------------
+	Changes the location of the computer in the database to "Returned" thereby moving it to the 
+	returned computers list on page refresh.
+	-------------------------------------------------------------------------------------------------*/
+	public function return_pc($serial_number) {
 
 		# Prepare our data array to be inserted
 		$data = Array(
@@ -72,7 +76,7 @@ class inventory_controller extends base_controller {
 	
 	}
 	
-		public function logout() {
+	public function logout() {
 		# echo "This is the logout page";
 		
 		# Generate and save a new token for next login
