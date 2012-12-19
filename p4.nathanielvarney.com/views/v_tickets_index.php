@@ -7,7 +7,7 @@
 </div>
 
 
-	<form name="new-ticket" id="ticket-form" method="POST" action="/tickets/p_ticket" data-ajax="true">
+	<form name="new-ticket" id="ticket-form" method="POST" action="/tickets/p_ticket" data-ajax="true"">
 		<div data-role="fieldcontain" id="ticketType">
 			<fieldset data-role="controlgroup">
 				<legend>Ticket Type:</legend>
