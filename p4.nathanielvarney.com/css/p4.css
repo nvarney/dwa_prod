@@ -1,22 +1,16 @@
+/* Set error messages to red */
 .error {
 	color: red;
 	font-weight: bold;
 }
 
-.table-stroke thead th {
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
-}
-.table-stroke tbody th,
-.table-stroke tbody td {
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
-  padding-right: 5px;
-}
-
+/* Move Harvard logo to center */
 .logo-container {
 text-align: center;
 margin: .5em 50px .4em;
 }
 
+/* Formatting for header log */
 .header-logo {
 background-repeat: no-repeat;
 background-position: 0 0;
@@ -25,12 +19,15 @@ width: 300px;
 height: 26px;
 background: url(/images/hsph-logo-small.png);
 }
+
+/* Format header link buttons */
 .header-btn {
 	-moz-border-radius: 1em /*{global-radii-blocks}*/;
 	-webkit-border-radius: 1em /*{global-radii-blocks}*/;
 	border-radius: 1em /*{global-radii-blocks}*/;
 }
 
+/* Center footer text */
 .footer-text {
 text-align: center;
 font-size: 10px;
