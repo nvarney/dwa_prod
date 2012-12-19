@@ -25,8 +25,8 @@ class users_controller extends base_controller {
 	
 	public function p_signup() {
 		
-		# Dump out the results of POST to see what the form submitted
-		# print_r($_POST);
+		# Creates user account for testing
+		# Checks done by validator plugin now
 		
 		# Check if data was entered
 		if (($_POST['first_name'] == "") || ($_POST['last_name'] == "") || ($_POST['password'] == "")){

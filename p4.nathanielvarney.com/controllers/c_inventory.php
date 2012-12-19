@@ -13,12 +13,11 @@ class inventory_controller extends base_controller {
 	public function index() {
 		
 		# If user is blank, they're not logged in, show message and don't do anything else
+		# User should not arrive
 		if(!$this->user) {
-			echo "Helpdesk staff only. <a href='/tickets'>Return to ticket submission</a>";
-			
-			# Return will force this method to exit here so the rest of 
-			# the code won't be executed and the profile view won't be displayed.
-			return false;
+		
+			# Send them to the index page to try again
+			Router::redirect("/index");	
 		}
 		
 		# Any method that loads a view will commonly start with this
