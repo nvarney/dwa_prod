@@ -24,4 +24,11 @@
 			</li>
 			<? endforeach; ?>
 		</ul>
+			
+	<!-- Logout button -->
+	<div id="logoutButton">
+		<a href="/inventory/logout" data-role="button" data-inline="true" data-theme="b">Logout</a>
+	</div>
+	
+
 </div>
