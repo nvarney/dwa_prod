@@ -77,7 +77,7 @@ class index_controller extends base_controller {
 		# Retrieve the token if it's available
 		$q = "SELECT token 
 			FROM users 
-			WHERE email = '".$_POST['email']."' 
+			WHERE email = '".$_POST['username']."' 
 			AND password = '".$_POST['password']."'";
 		
 		$token = DB::instance(DB_NAME)->select_field($q);	
