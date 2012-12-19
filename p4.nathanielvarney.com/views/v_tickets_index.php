@@ -83,7 +83,7 @@
 		
 		<div data-role="fieldcontain">
 		 <label for="notes">Notes:</label>
-		 <textarea name="notes" id="notes" class="general_input" placeholder="Enter any special instructions or requests here" value=""></textarea>
+		 <textarea name="notes" id="notes" class="general_input" placeholder="Enter any special instructions or requests here"></textarea>
 		</div>
 		
 		<div class="ui-body ui-body-c">
