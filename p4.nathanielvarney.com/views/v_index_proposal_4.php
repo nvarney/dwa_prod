@@ -22,8 +22,8 @@
 	</li>
 </ul>
 
-<img src="/images/P4_proposal_01.png" width="300">
-<img src="/images/P4_proposal_02.png" width="300">
+<img src="/images/P4_proposal_01.png" width="300" alt="Proposed ticket page">
+<img src="/images/P4_proposal_02.png" width="300" alt="Proposed inventory page">
 
 <h2>Inspiration:</h2>
 <ul>
