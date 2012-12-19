@@ -48,10 +48,10 @@
 			<form method="POST" action="/index/p_login">
 				<div style="padding:10px 20px;">
 				  <h3>Helpdesk Staff Login</h3>
-		          <label for="un" class="ui-hidden-accessible">Email:</label>
-		          <input type="text" name="email" id="email" value="" placeholder="username" data-theme="a" />
+		          <label for="emailUsername" class="ui-hidden-accessible">Email:</label>
+		          <input type="text" name="emailUsername" id="emailUsername" value="" placeholder="email address" data-theme="a" />
 
-		          <label for="pw" class="ui-hidden-accessible">Password:</label>
+		          <label for="password" class="ui-hidden-accessible">Password:</label>
 		          <input type="password" name="password" id="password" value="" placeholder="password" data-theme="a" />
 
 		    	  <button type="submit" data-theme="b">Sign in</button>
