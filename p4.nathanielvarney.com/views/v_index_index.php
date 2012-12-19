@@ -1,3 +1,4 @@
+<!-- Error page for accessing /index or /inventory without logging in -->
 <div id="whoops">
 	<h2>You probably don't want to be here</h2>
 	<p>Why don't you click the button below to get where you should be?</p>

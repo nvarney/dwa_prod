@@ -1,8 +1,5 @@
-<? if($message): ?>
-	<div id='message'>	
-		<?=$message?>
-	</div>
-<? endif; ?>
+<!-- User signup page adapted from p2 -->
+<!-- Checking is done via validator plugin -->
 	
 <form id="user-signup" method='POST' action='/users/p_signup'>
 	<p> This form only exists for site demo purposes. You can create a login to access the helpdesk side of the site (but this won't exist for the full, LDAP linked version). </p>

@@ -1,3 +1,5 @@
+<!-- Message to tell users they successfully logged out -->
+<!-- Accessed via the logout button on the inventory page -->
 <div class="success-message">
 	<h2>You have successfully logged out!</h2>
 	<p>Click the below link to return to the Computer Drop Off Form.</p>

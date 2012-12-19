@@ -1,3 +1,4 @@
+<!-- Page to confirm that a user has signed up successfully -->
 <div id="success-message">
 	<h2>You have successfully created a test account</h2>
 	<p>You should now be able to login and view the computer inventory by clicking the gear icon.</p>

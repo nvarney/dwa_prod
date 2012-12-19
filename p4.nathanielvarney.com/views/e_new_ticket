@@ -1,6 +1,0 @@
-"This is confirmation that you have delivered your "+ $_POST['model'] + 
-		" to the helpdesk at "
-		+ date(g\:i a \o\n F d\, Y) + 
-		" with the following notes: <br>"
-		+ $_POST['notes'] +
-		"<br><br>Thank you and have a great day!<br>The Helpdesk";

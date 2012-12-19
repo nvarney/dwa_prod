@@ -1,3 +1,5 @@
+<!-- Page that houses the ticket form -->
+
 <div id="page-description" class="ui-body ui-body-c">
 	<h2>IT Computer Drop-Off Form</h2>
 	<p>With this form, you can submit a ticket for your new computer setup, computer re-image, virus removal, or other general issue. 
@@ -37,6 +39,7 @@
 		 <input type="tel" name="phone" id="phone" class="general_input required" size="21" maxlength="21" placeholder="(617) 432-4357" value=""  />
 		</div>
 		
+		<!-- Sectined menu for choosing the appropriate computer model -->
 		<div data-role="fieldcontain">
 			<label for="model" class="select">Computer Model:</label>
 			<select name="model" id="model" data-native-menu="false" data-theme="c">
@@ -74,6 +77,8 @@
 		 <input type="text" name="serial" id="serial" class="general_input required" size="31" maxlength="31" placeholder="L3AKV71" value=""  />
 		</div>
 		
+		<!-- Popup that holds the serial number location info -->
+		<!-- Images were taken from googling serial number and are not my own content -->
 		<div data-role="popup" id="serialImage" data-overlay-theme="a" data-theme="d" data-corners="false">
 			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 			<img id="dellSerial" class="serialPhoto" src="/images/dell-serial.jpeg" alt="Dell Serial Number">

@@ -1,3 +1,6 @@
+<!-- Generates a list of computers whose location is currently set to Helpdesk -->
+<!-- Each item has a link that can be used to remove it from the active list -->
+<!-- Lists can be filtered to make computers easy to find -->
 <div data-role="content" data-theme="b" data-ajax="false">
 	<h2>Active Computers</h2>
 		<p>These are the computers currently at the helpdesk</p>
@@ -12,6 +15,7 @@
 			<? endforeach; ?>
 		</ul>	
 
+	<!-- List of computers with their location set to "Returned", so, no longer active -->
 	<h2>Returned Computers</h2>
 		<p>These are the computers have recently been returned to customers</p>
             <ul data-role="listview" data-filter="true" data-inset="true" data-theme="a" data-split-theme="b">
