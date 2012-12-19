@@ -69,9 +69,8 @@
 		<div data-role="footer" class="footer-docs" data-theme="e">
 			<div class="footer-text">
 			<p>&copy; 2012 Nathan Varney for HSPH IT</p>
-			<div>
+			</div>
 		</div>
 	
-	</div>
 </body>
 </html>
