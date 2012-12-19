@@ -1,3 +1,5 @@
+
+<!-- Test page for jQUery sytles. Not used in final version. -->
 <div data-role="content">
 		<div class="content-primary">
 
