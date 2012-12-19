@@ -10,7 +10,7 @@
   
   	<!-- CSS -->
   	<link rel="stylesheet" href="/css/hsph.css" />
-  	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+  	<link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
   	<link rel="stylesheet" href="/css/p4.css" />
 	
 	<!-- JS -->
