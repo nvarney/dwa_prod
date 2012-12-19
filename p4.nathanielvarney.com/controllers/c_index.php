@@ -7,7 +7,7 @@ class index_controller extends base_controller {
 	} 
 	
 	/*-------------------------------------------------------------------------------------------------
-	Access via http://yourapp.com/index/index/
+	Access via http://p4.nathanielvarney.com/index. Not used in production (/ goes to /tickets)
 	-------------------------------------------------------------------------------------------------*/
 	public function index() {
 		

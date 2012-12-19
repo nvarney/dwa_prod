@@ -70,7 +70,7 @@
 		</div>
 		
 		<div data-role="fieldcontain">
-		 <label for="serial">Computer Serial #:<a href="#serialImage" data-rel="popup" id="model-pop-btn" data-position-to="window" data-role="button" data-inline="true" data-transition="fade" data-icon="info" data-mini="true" data-iconpos="notext">How do I find my serial number?</a></label>
+		 <label for="serial">Computer Serial #:<a href="#serialImage" data-rel="popup" id="model-pop-btn" data-position-to="window" data-role="button" data-inline="true" data-transition="fade" data-icon="info" data-mini="true" data-iconpos="left">Where is my serial?</a></label>
 		 <input type="text" name="serial" id="serial" class="general_input required" size="31" maxlength="31" placeholder="L3AKV71" value=""  />
 		</div>
 		

@@ -7,7 +7,8 @@ class inventory_controller extends base_controller {
 	} 
 	
 	/*-------------------------------------------------------------------------------------------------
-	Access via http://yourapp.com/inventory/index/
+	Access via http://p4.nathanielvarney.com/inventory
+	Displays a list of computers actively in the inventory and checked out
 	-------------------------------------------------------------------------------------------------*/
 	public function index() {
 		
@@ -88,8 +89,10 @@ class inventory_controller extends base_controller {
 		# Delete their token cookie - effectively logging them out
 		setcookie("token", "", strtotime('-1 year'), '/');
 		
-		# Send them back to the main landing page
-		Router::redirect("/");
+		# Send them to the logout success page
+		$this->template->content = View::instance('v_inventory_logout_success');
+		$this->template->title = "Logout Successful!";
+		echo $this->template;
 
 	}
 		

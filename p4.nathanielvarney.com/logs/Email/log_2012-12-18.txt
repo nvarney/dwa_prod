@@ -1,0 +1,8 @@
+2012-12-18 23:22:17 - INFO --> Controller/Method: tickets/p_ticket 
+2012-12-18 23:22:17 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY p4admin@nathanielvarney.com 
+2012-12-18 23:22:17 - INFO --> From: HSPH Helpdesk (p4admin@nathanielvarney.com) 
+2012-12-18 23:22:17 - INFO --> To: Billy Bean (bbean@hsph.harvard.edu),  
+2012-12-18 23:22:17 - INFO --> CC:  
+2012-12-18 23:22:17 - INFO --> BCC:  
+2012-12-18 23:22:17 - INFO --> Subject: Helpdesk Computer Drop Off: New PC Setup 
+2012-12-18 23:22:17 - INFO --> Body: This is confirmation that you have delivered your  

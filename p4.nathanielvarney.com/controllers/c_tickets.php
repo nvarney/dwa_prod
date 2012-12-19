@@ -110,7 +110,7 @@ class tickets_controller extends base_controller {
   			echo "Mailer Error: " . $mail->ErrorInfo;
 		} else {
   			# First, set the content of the template with a view file
-			$this->template->content = View::instance('v_ticket_success');
+			$this->template->content = View::instance('v_tickets_p_ticket_success');
 			$this->template->title = "Success!";
 			echo $this->template;
 		}
