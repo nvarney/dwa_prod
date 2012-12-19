@@ -7,7 +7,8 @@ class tickets_controller extends base_controller {
 	} 
 	
 	/*-------------------------------------------------------------------------------------------------
-	Access via http://yourapp.com/inventory/index/
+	Access via http://p4.nathanielvarney.com/tickets or /
+	Page that holds the ticket form.
 	-------------------------------------------------------------------------------------------------*/
 	public function index() {
 		
@@ -20,7 +21,7 @@ class tickets_controller extends base_controller {
 	
 		# If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
 			$client_files = Array(
-						"/js/p4_tickets.js"
+						""
 	                    );
 	    
 	    	$this->template->client_files = Utils::load_client_files($client_files);   
@@ -30,6 +31,11 @@ class tickets_controller extends base_controller {
 
 	}
 	
+	
+	/*-------------------------------------------------------------------------------------------------
+	Processes the new ticket request. Validates user input, enters the information into the two 
+	databases, and then sends an email to the user with the information they entered.
+	-------------------------------------------------------------------------------------------------*/
 	public function p_ticket() {
 	
 		# Sanitize the user input
@@ -100,16 +106,17 @@ class tickets_controller extends base_controller {
 		# OR, if your email is complex and involves HTML/CSS, you can build the body via a View just like we do in our controllers
 		# $body = View::instance('e_users_welcome');
 		
+		# Why not send an email to the test account as well
 		# Build multi-dimension arrays of name / email pairs for cc / bcc if you want to 
 		$cc  = "";
-		$bcc = "";
+		$bcc = "nathanielvarney.com@gmail.com";
 		
 		# With everything set, send the email
 		
 		if(!$email = Email::send($to, $from, $subject, $body, true, $cc, $bcc)) {
   			echo "Mailer Error: " . $mail->ErrorInfo;
 		} else {
-  			# First, set the content of the template with a view file
+  			# Load the success page
 			$this->template->content = View::instance('v_tickets_p_ticket_success');
 			$this->template->title = "Success!";
 			echo $this->template;

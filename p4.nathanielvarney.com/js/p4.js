@@ -1,10 +1,9 @@
 $(document).ready(function() {	
 	
-	// This function activates the form validator after the page loads
-	//$('#ticket-form').live('click focus mouseover', function() {
-	//	$(this).validate();	
-	//});
-	
+	/*-------------------------------------------------------------------------------------------------
+	This function validates the ticket form.
+	Triggered on modification of the form because jquerymobile pulls in the pages over ajax
+	-------------------------------------------------------------------------------------------------*/
 	$('#ticket-form').live('click focus mouseover', function() {
 		$('#ticket-form').validate({
 			rules: {
@@ -27,7 +26,9 @@ $(document).ready(function() {
 		});	
 	});
 	
-	// This function hides the appropriate images in the popup window bases on the chosen model number
+	/*-------------------------------------------------------------------------------------------------
+	This function hides the appropriate images in the popup window bases on the chosen model number
+	-------------------------------------------------------------------------------------------------*/
 	$('#model-pop-btn').live('click', function() {
 	if (($('#model').val()=="Dell Optiplex")||($('#model').val()=="Dell Latitude")||($('#model').val()=="Dell Precision")) {
 		$('#dellSerial').show();
@@ -47,7 +48,9 @@ $(document).ready(function() {
 	});
 	
 	
-	//This function does validation of the user signup page
+	/*-------------------------------------------------------------------------------------------------
+	This function validates the user signup page.
+	-------------------------------------------------------------------------------------------------*/
 	$('#user-signup').live('click focus mouseover', function() {
 		$('#user-signup').validate({
 			rules: {

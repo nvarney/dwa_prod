@@ -29,7 +29,7 @@ class inventory_controller extends base_controller {
 	
 		# If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
 			$client_files = Array(
-						"/js/p4_inventory.js"
+						""
 	                    );
 	    
 	    	$this->template->client_files = Utils::load_client_files($client_files);   
@@ -63,8 +63,8 @@ class inventory_controller extends base_controller {
 			"location" => "Returned",
 			);
 		
+		# Match to serial number
 		$where_condition="WHERE serial = \"".$serial_number."\"";
-		//echo $where_condition;
 		
 		# Do the insert
 		DB::instance(DB_NAME)->update('computers', $data, $where_condition);
@@ -76,6 +76,10 @@ class inventory_controller extends base_controller {
 	
 	}
 	
+	/*-------------------------------------------------------------------------------------------------
+	Deletes the token and directs the user to a success page.
+	Useful if the database is accessed on a shared computer.
+	-------------------------------------------------------------------------------------------------*/
 	public function logout() {
 		# echo "This is the logout page";
 		

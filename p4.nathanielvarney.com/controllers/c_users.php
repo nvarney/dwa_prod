@@ -6,6 +6,12 @@ class users_controller extends base_controller {
 		# echo "users_controller construct called<br><br>";
 	} 
 	
+	/*-------------------------------------------------------------------------------------------------
+	Access via http://p4.nathanielvarney.com/users/signup
+	Page used from p2 after modifications to allow for testing of inventory features
+	Just creates the helpdesk test accounts
+	-------------------------------------------------------------------------------------------------*/
+	
 	public function index() {
 		# Changed from class example to redirect to home page
 		#echo "Welcome to the users's department";
@@ -23,10 +29,11 @@ class users_controller extends base_controller {
 			echo $this->template;
 	}
 	
+	/*-------------------------------------------------------------------------------------------------
+	Creates user account for testing
+	Checks done by validator plugin now
+	-------------------------------------------------------------------------------------------------*/
 	public function p_signup() {
-		
-		# Creates user account for testing
-		# Checks done by validator plugin now
 		
 		# Check if data was entered
 		if (($_POST['first_name'] == "") || ($_POST['last_name'] == "") || ($_POST['password'] == "")){
@@ -60,7 +67,7 @@ class users_controller extends base_controller {
 		# Insert this user into the database
 		$user_id = DB::instance(DB_NAME)->insert("users", $_POST);
 		
-		# First, set the content of the template with a view file
+		# Send the user to the signup success page
 		$this->template->content = View::instance('v_users_signup_success');
 		$this->template->title = "Success!";
 		echo $this->template; 
