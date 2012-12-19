@@ -29,7 +29,7 @@ class inventory_controller extends base_controller {
 	
 		# If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
 			$client_files = Array(
-						""
+						"/js/p4_inventory.js"
 	                    );
 	    
 	    	$this->template->client_files = Utils::load_client_files($client_files);   
@@ -59,7 +59,6 @@ class inventory_controller extends base_controller {
 			"location" => "Returned",
 			);
 		
-		# Search for a matching serial number
 		$where_condition="WHERE serial = \"".$serial_number."\"";
 		//echo $where_condition;
 		
