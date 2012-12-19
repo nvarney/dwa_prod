@@ -7,7 +7,7 @@ class tickets_controller extends base_controller {
 	} 
 	
 	/*-------------------------------------------------------------------------------------------------
-	Index function. Access via p4.nathanielvarney.com/tickets
+	Access via http://yourapp.com/inventory/index/
 	-------------------------------------------------------------------------------------------------*/
 	public function index() {
 		
@@ -20,7 +20,7 @@ class tickets_controller extends base_controller {
 	
 		# If this view needs any JS or CSS files, add their paths to this array so they will get loaded in the head
 			$client_files = Array(
-						""
+						"/js/p4_tickets.js"
 	                    );
 	    
 	    	$this->template->client_files = Utils::load_client_files($client_files);   
@@ -30,10 +30,6 @@ class tickets_controller extends base_controller {
 
 	}
 	
-	/*-------------------------------------------------------------------------------------------------
-	This function enters the computer information in the computer database, the ticket information into 
-	the ticket database, and generates an email that is sent to the user.
-	-------------------------------------------------------------------------------------------------*/
 	public function p_ticket() {
 	
 		# Sanitize the user input
@@ -54,10 +50,8 @@ class tickets_controller extends base_controller {
 			Router::redirect("/tickets");
 		}
 		
-		# Tickets in our current system are essentially the time of entry
-		$_POST['ticket_id'] = date('Ymd\-his');
-		
 		# Unix timestamp of when this post was created / modified
+		$_POST['ticket_id'] = date('Ymd\-his');
 		$_POST['created']  = Time::now();
 		$_POST['modified'] = Time::now();
 		
@@ -75,7 +69,7 @@ class tickets_controller extends base_controller {
 		unset($ticket['model'], $ticket['serial']);
 		unset($computer['email'], $computer['phone'], $computer['notes']);
 		
-		# Insert ticket and computer 
+		# Insert
 		DB::instance(DB_NAME)->insert('tickets', $ticket);
 		DB::instance(DB_NAME)->insert('computers', $computer);
 
@@ -89,7 +83,9 @@ class tickets_controller extends base_controller {
 		# Subject
 		$subject = "Helpdesk Computer Drop Off: ".$_POST["subject"];
 		
-		# Generate response message
+		# Generate Time
+		
+		# You can set the body as just a string of text
 		$body = "This is confirmation that you have delivered your "
 		. $_POST['model']. 
 		" with the serial number "
@@ -101,6 +97,9 @@ class tickets_controller extends base_controller {
 		"<br><br>Thank you and have a great day!"
 		."<br>The Helpdesk<br>(617) 432-4357<br>helpdesk@hsph.harvard.edu";
 		
+		# OR, if your email is complex and involves HTML/CSS, you can build the body via a View just like we do in our controllers
+		# $body = View::instance('e_users_welcome');
+		
 		# Build multi-dimension arrays of name / email pairs for cc / bcc if you want to 
 		$cc  = "";
 		$bcc = "";
@@ -110,36 +109,13 @@ class tickets_controller extends base_controller {
 		if(!$email = Email::send($to, $from, $subject, $body, true, $cc, $bcc)) {
   			echo "Mailer Error: " . $mail->ErrorInfo;
 		} else {
-  			# Generate and render the success window
+  			# First, set the content of the template with a view file
 			$this->template->content = View::instance('v_ticket_success');
 			$this->template->title = "Success!";
 			echo $this->template;
 		}
 		
 		
-	}
-	
-	/*-------------------------------------------------------------------------------------------------
-	Logout function to clear the cache. Needed if a tech accesses the database from a public computer
-	-------------------------------------------------------------------------------------------------*/
-	public function logout() {
-		
-		# Generate and save a new token for next login
-		$new_token = sha1(TOKEN_SALT.$this->user->email.Utils::generate_random_string());
-		
-		# Create the data array we'll use with the update method
-		# In this case, we're only updating one field, so our array only has one entry
-		$data = Array("token" => $new_token);
-		
-		# Do the update
-		DB::instance(DB_NAME)->update("users", $data, "WHERE token = '".$this->user->token."'");
-		
-		# Delete their token cookie - effectively logging them out
-		setcookie("token", "", strtotime('-1 year'), '/');
-		
-		# Send them back to the main landing page
-		Router::redirect("/");
-
 	}
 		
 } // end class
