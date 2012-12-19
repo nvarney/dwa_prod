@@ -45,8 +45,9 @@
 		
 		<!-- Div for the login popup window -->
 		<div data-role="popup" id="popupLogin" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
+			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
 			<form method="POST" action="/index/p_login">
-				<div style="padding:10px 20px;">
+				<div id="helpdeskLogin">	 
 				  <h3>Helpdesk Staff Login</h3>
 		          <label for="emailUsername" class="ui-hidden-accessible">Email:</label>
 		          <input type="text" name="emailUsername" id="emailUsername" value="" placeholder="email address" data-theme="a" />

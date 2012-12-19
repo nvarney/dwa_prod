@@ -35,3 +35,7 @@ background: url(/images/hsph-logo-small.png);
 text-align: center;
 font-size: 10px;
 }
+
+#helpdeskLogin{
+padding:10px 20px;
+}
